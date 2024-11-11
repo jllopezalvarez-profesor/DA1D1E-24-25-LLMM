@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Ejemplo de formulario</h1>
+    </header>
+    <main>
+        <form method="post" action="https://iesclaradelrey.es/utils/procesa.php">
+            <p>
+                <label>
+                    Nombre (asociación implícita):
+                    <input type="text" name="nombre">
+                </label>
+            </p>
+            <p> <label for="ape"> Apellidos:</label>
+                <span class="separador"></span>
+                <input type="text" name="apellidos" id="ape">
+            </p>
+            <p><label for="dni">DNI:</label>
+                <input type="text" name="dni" id="dni">
+            </p>
+            <p><label>DA2D1E<input type="radio" name="curso" value="DA1D1E"></label></p>
+            <p><label><input type="radio" name="curso" value="DA2D1E">DA2D1E - Se recomienda a la derecha para checkbox
+                    y radio button</label></p>
+            <p>
+                <button type="submit" name="btnEnviar" value="valBtnEnviar">Enviar</button>
+            </p>
+            <p><button type="reset">Reiniciar formulario</button></p>
+        </form>
+
+    </main>
+
+</body>
+
+</html>
