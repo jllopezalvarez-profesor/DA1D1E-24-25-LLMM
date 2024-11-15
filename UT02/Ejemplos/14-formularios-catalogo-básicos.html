@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demostración (más o menos completa) de campos de formulario básicos</title>
+</head>
+
+<body>
+    <h1>Demostración (más o menos completa) de campos de formulario básicos</h1>
+
+    <form method="post" action="https://iesclaradelrey.es/utils/procesa.php" enctype="multipart/form-data">
+        <!-- Campo de texto normal -->
+        <h2>Campo de texto normal</h2>
+        <p>Este campo permite introducir texto simple, como nombres o direcciones.</p>
+
+        <p><label for="text-input">Texto: </label></p>
+        <p><input type="text" id="text-input" name="text-input"></p>
+        <p><label for="otro-text-input">Email : </label></p>
+        <p><input type="text" id="otro-text-input" name="otro-text-input" value="" placeholder="nombre@dominio.com">
+        </p>
+
+
+        <!-- Campo de contraseña -->
+        <h2>Campo de contraseña</h2>
+        <p>Este campo oculta los caracteres introducidos.</p>
+
+        <p><label for="password-input">Contraseña: </label></p>
+        <p><input type="password" id="password-input" name="password-input"></p>
+
+
+        <!-- Campo de texto largo (textarea) -->
+        <h2>Campo de texto largo</h2>
+        <p>Este campo permite introducir varias líneas de texto.</p>
+
+        <p><label for="textarea">Comentario: </label></p>
+        <p><textarea id="textarea" name="textarea" rows="4" cols="50">Valor por defecto de textarea</textarea></p>
+
+
+        <!-- Radio buttons -->
+        <h2>Botones de opción (radio buttons)</h2>
+        <p>Permite seleccionar una sola opción de un grupo.</p>
+        <p>Se considera buena práctica colocarlos en listas.</p>
+        <p>El HTML es aún mejorable, pero veremos como hacerlo más adelante.</p>
+
+        <p>Seleccione su género:</p>
+        <ul>
+            <li><label><input type="radio" name="genero" value="male">Masculino</label></li>
+            <li><label><input type="radio" name="genero" value="female">Femenino</label></li>
+            <li><label><input type="radio" name="genero" value="other">Otro</label></li>
+        </ul>
+        <p>En general, aunque no es obligatorio, se suele poner la etiqueta (label) detrás del radio button. Así se
+            alinean mejor visualmente.</p>
+
+        <h2>Botones de opción (radio buttons) incorrectos</h2>
+        <p>Aunque técnicamente podemos hacer radiobuttons que funcionen independientemente, no agrupados, no es
+            correcto, porque para seleccionar múltiples valores para un parámetro se usa checkbox</p>
+
+        <p>Ejemplo de radiobuttons incorrectos, porque no están agrupados:</p>
+        <p>Seleccione sus intereses</p>
+        <ul>
+            <li><label><input type="radio" name="interesesLeer" value="leer">La lectura</label></li>
+            <li><label><input type="radio" name="interesesPasear" value="pasear">Pasear por el campo</label></li>
+            <li><label><input type="radio" name="interesesAnimales" value="animales">Los animales</label></li>
+        </ul>
+        <p>Uno de los problemas que se aprecia es que no se puede desmarcar algo una vez marcado.</p>
+
+
+        <!-- Checkboxes -->
+        <h2>Casillas de verificación (checkboxes)</h2>
+        <p>Permite seleccionar múltiples opciones.</p>
+        <p>Como con los radio buttons, se considera buena práctica ponerlos en listas.</p>
+        <ul>
+            <li><input type="checkbox" name="intereses[]" value="sports">Deportes</li>
+            <li><input type="checkbox" name="intereses[]" value="music">Música</li>
+            <li><input type="checkbox" name="intereses[]" value="movies">Películas</li>
+        </ul>
+        <p>Igual que en radio buttons se suele poner la etiqueta (label) detrás del radio button.</p>
+        <p>En el atributo "name" se añaden corchetes "[]" al nombre del campo para que PHP, el lenguaje que procesa la
+            petición en el servidor en la página de ejemplo del instituto, reconozca que es un parámetro que puede
+            recibir varios valores.</p>
+
+        <p>Si no se usan corchetes, no funcionará correctamente en PHP, pero el resto de lenguajes de programación sí
+            que lo procesarán correctamente.</p>
+
+        <p>Este conjunto de checkboxes no funcionan igual. En HTML sí, pero al enviarlos al servidor no se reciben los
+            datos igual, porque el lenguaje en el servidor es PHP.</p>
+        <ul>
+            <li><input type="checkbox" name="interesesSinCorchete" value="sports">Deportes</li>
+            <li><input type="checkbox" name="interesesSinCorchete" value="music">Música</li>
+            <li><input type="checkbox" name="interesesSinCorchete" value="movies">Películas</li>
+        </ul>
+        <p>En VS Code puede que aparezcan errores porque hay varios controles con el mismo nombre. Esto es por la
+            extensión de validación, pero técnicamente es correcto. Es uno de los casos en los que hay que ignorar los
+            errores de la extensión.</p>
+
+        <!-- Lista desplegable -->
+        <h2>Lista desplegable</h2>
+        <p>Permite seleccionar una opción de una lista desplegable.</p>
+        <p>Sólo permite seleccionar un valor.</p>
+
+        <p><label for="select">Seleccione un país: </label></p>
+        <p>
+            <select id="select" name="select">
+                <option value="">Seleccione una opción...</option>
+                <option value="spain">España</option>
+                <option value="france">Francia</option>
+                <option value="germany">Alemania</option>
+            </select>
+        </p>
+
+        <h2>Lista desplegable multiselección</h2>
+        <p>Permite seleccionar varias opciones de una lista.</p>
+        <p>Se activa con el atributo "multiple" </p>
+        <p>El atributo size indica cuantos elementos se muestran en la lista</p>
+        <p>Para seleccionar múltiples valores se mantiene pulsado "ctrl"</p>
+        <p>Si el lenguaje de servidor es PHP, hay que usar [] en el nombre</p>
+
+        <p><label for="multiselect">Seleccione un país: </label></p>
+        <p>
+            <select id="multiselect" name="multiselect[]" multiple size="3">
+                <option value="spain">España</option>
+                <option value="france">Francia</option>
+                <option value="germany">Alemania</option>
+                <option value="italy">Italia</option>
+                <option value="greece">Grecia</option>
+                <option value="poland">Polonia</option>
+            </select>
+        </p>
+
+        <!-- Campo File para un solo archivo -->
+        <h2>Subir un archivo</h2>
+        <p>Este campo permite seleccionar un único archivo.</p>
+        <p>Cuando se usan campos de tipo "file", se tiene que añadir enctype="multipart/form-data" al elemento "form"
+        </p>
+        <p>Si no se añade el atributo, no se subirán los ficheros</p>
+
+        <p><label for="file-upload">Seleccione un archivo: </label></p>
+        <p><input type="file" id="file-upload" name="file-upload"></p>
+
+
+        <!-- Campo File para múltiples archivos -->
+        <h2>Subir múltiples archivos</h2>
+        <p>Este campo permite seleccionar varios archivos a la vez.</p>
+        <p>Como en select, se usa el atributo "multiple", para </p>
+
+        <p><label for="multi-file-upload">Seleccione archivos: </label></p>
+        <p><input type="file" id="multi-file-upload" name="multi-file-upload" multiple></p>
+
+
+        <!-- Campo File para solo imágenes -->
+        <h2>Subir una Imagen</h2>
+        <p>Este campo permite seleccionar solo archivos de imagen.</p>
+
+        <p><label for="image-upload">Seleccione una imagen: </label></p>
+        <p><input type="file" id="image-upload" name="image-upload" accept="image"></p>
+
+
+        <!-- Campo File para imágenes JPEG -->
+        <h2>Subir una Imagen JPEG</h2>
+        <p>Este campo permite seleccionar solo archivos JPEG.</p>
+
+        <p><label for="jpeg-upload">Seleccione una imagen JPEG: </label></p>
+        <p><input type="file" id="jpeg-upload" name="jpeg-upload" accept="*.jpg"></p>
+
+        <!-- Campo oculto -->
+        <h2>Campo Oculto</h2>
+        <p>Este campo no es visible para el usuario, pero envía datos al servidor.</p>
+
+        <input type="hidden" name="hidden-field" value="hidden-value">
+
+
+        <!-- Botón de envío -->
+        <h2>Botón de Envío</h2>
+        <p>Este botón envía los datos del formulario.</p>
+
+        <button type="submit" name="btn" value="valor-boton-1">Enviar 1</button>
+        <button type="submit" name="btn" value="valor-boton-2">Enviar 2</button>
+    </form>
+
+</body>
+
+</html>

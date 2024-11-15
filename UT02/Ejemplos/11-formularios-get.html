@@ -4,14 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ejemplo de formulario que hace envío a una acción distinta a sí mismo</title>
 </head>
 
 <body>
     <header>
-        <h1>Ejemplo de formulario</h1>
+        <h1>Ejemplo de formulario que hace envío a una acción distinta a sí mismo</h1>
     </header>
     <main>
+        <p>Este formulario, es igual que el del ejemplo 01, pero realiza el envío a una dirección de pruebas
+            "https://iesclaradelrey.es/utils/procesa.php".</p>
+        <p>Como no tiene "method", se usará GET para hacer el envío.</p>
+        <p>Sigue estando mal, porque no tiene etiquetas (label)</p>
         <form action="https://iesclaradelrey.es/utils/procesa.php">
             <input type="text" name="nombre">
             <input type="text" name="apellidos">

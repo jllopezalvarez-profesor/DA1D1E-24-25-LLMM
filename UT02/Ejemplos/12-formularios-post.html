@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de formulario que hace envío por POST</title>
+</head>
+
+<body>
+    <header>
+        <h1>Ejemplo de formulario que hace envío por POST</h1>
+    </header>
+    <main>
+        <p>Este formulario, es igual que el del ejemplo 02, sigue realizando el envío a la dirección de pruebas, pero
+            usa específicamente el método POST.</p>
+        <p>Al usar POST, no se verán los datos envíados en la URL, pero sí se podrán ver si usamos las herramientas de
+            desarrollo de los navegadores.</p>
+        <p>Sigue estando mal en lo que respecta a etiquetas</p>
+        <form method="post" action="https://iesclaradelrey.es/utils/procesa.php">
+            <input type="text" name="nombre">
+            <input type="text" name="apellidos">
+            <input type="text" name="dni">
+            <button type="submit">Enviar</button>
+        </form>
+
+    </main>
+
+</body>
+
+</html>

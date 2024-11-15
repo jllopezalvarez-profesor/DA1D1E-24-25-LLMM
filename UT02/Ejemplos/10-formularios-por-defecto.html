@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Ejemplo 01 de formulario</h1>
+    </header>
+    <main>
+        <p>Este formulario no es correcto porque los campos no tienen etiquetas (elemento "label") asociadas.</p>
+        <p>Como no tiene atributo "action", se envía "a sí mismo". Es decir, se envía a la misma URL con la que se
+            accedió al formulario.</p>
+        <p>Como no tiene atributo "method", se envía con método GET, lo que hará que los valores de los campos se vean
+            en la URL.</p>
+        <p>Importante: recordar que el atributo "name" de cada campo es el que determina el nombre con el que se envía
+            el dato al servidor.</p>
+        <form>
+            <input type="text" name="nombre">
+            <input type="text" name="apellidos">
+            <input type="text" name="dni">
+            <button type="submit">Enviar</button>
+        </form>
+
+    </main>
+
+</body>
+
+</html>

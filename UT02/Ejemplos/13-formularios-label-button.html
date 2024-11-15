@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de formulario con etiquetas y varios botones</title>
+</head>
+
+<body>
+    <header>
+        <h1>Ejemplo de formulario con etiquetas y varios botones</h1>
+    </header>
+    <main>
+        <p>Este formulario es más correcto, porque los campos de formulario están asociados a etiquetas (label)</p>
+        <p>La asociación puede ser:</p>
+        <ul>
+            <li>Implícita (el campo está dentro de la etiqueta)</li>
+            <li>Explícita (se asocia la etiqueta al campo a través del atributo id del campo y el atributo for en la
+                etiqueta)</li>
+        </ul>
+        <p>Este formulario incluye un botón para "resetear" el formulario, para devolverlo al estado inicial. En
+            general, no se recomienda porque no es demasiado útil para los usuarios, y pueden hacer clic por error en
+            él, y deshacer los cambios que habían hecho ya.</p>
+        <p>En el formulario hay dos botones, los dos con el nombre "btn", pero con valores (atributos "value")
+            diferentes. Uno valor "enviar-principal" y otro con el valor "enviar-alternativo". Si se hace clic en los
+            botones, se puede observar que se envía información al servidor que permite identificar cuál de los dos
+            botones se ha pulsado.</p>
+        <form method="post" action="https://iesclaradelrey.es/utils/procesa.php">
+            <p>
+                <label>
+                    Nombre (asociación implícita):
+                    <input type="text" name="nombre">
+                </label>
+            </p>
+            <p> <label for="ape"> Apellidos:</label>
+                <span class="separador"></span>
+                <input type="text" name="apellidos" id="ape">
+            </p>
+            <p><label for="dni">DNI:</label>
+                <input type="text" name="dni" id="dni">
+            </p>
+            <p><label>DA2D1E<input type="radio" name="curso" value="DA1D1E"></label></p>
+            <p><label><input type="radio" name="curso" value="DA2D1E">DA2D1E - Se recomienda a la derecha para checkbox
+                    y radio button</label></p>
+            <p>
+                <button type="submit" name="btn" value="enviar-principal">Enviar principal</button>
+            </p>
+            <p>
+                <button type="submit" name="btn" value="enviar-alternativo">Enviar alternativo</button>
+            </p>
+            <p><button type="reset">Reiniciar formulario</button></p>
+        </form>
+
+    </main>
+
+</body>
+
+</html>
