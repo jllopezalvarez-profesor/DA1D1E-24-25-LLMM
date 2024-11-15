@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+</head>
+
+<body>
+    <header>
+        <h1>Formulario de registro</h1>
+    </header>
+    <main>
+        <form action="https://iesclaradelrey.es/utils/procesa.php" method="post">
+
+            <p><label for="nombre">Nombre: </label></p>
+            <p><input type="text" name="nombre" id="nombre"></p>
+            <p><label for="apellidos">Apellidos: </label></p>
+            <p><input type="text" name="apellidos" id="apellidos"></p>
+            <p>Elige el tipo de usuario</p>
+            <ul>
+                <li><label><input type="radio" name="tipousuario" value="a">Alumnado</label></li>
+                <li><label><input type="radio" name="tipousuario" value="p">Profesorado</label></li>
+            </ul>
+
+            <p><label for="select-tipousuario">Elige el tipo de usuario(select)</label></p>
+            <p>
+                <select name="select-tipousuario" id="select-tipousuario">
+                    <option value="">Seleccione...</option>
+                    <option value="a">Alumnado</option>
+                    <option value="p">Profesorado</option>
+                </select>
+            </p>
+
+            <p><label><input type="checkbox" name="aceptainfo">
+                    Deseo recibir información sobre novedades y
+                    ofertas</label></p>
+            <p><label><input type="checkbox" name="aceptacondiciones">
+                    Declaro haber leído y aceptar las condiciones generales del programa y la normativa sobre protección
+                    de datos</label></p>
+
+
+            <p><label>Contraseña:<input type="password" name="pass"></label></p>
+
+            <p><button type="submit">Enviar</button></p>
+        </form>
+
+    </main>
+
+</body>
+
+</html>
