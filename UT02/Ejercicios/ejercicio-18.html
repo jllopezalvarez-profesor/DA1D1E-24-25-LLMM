@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oferta de empleo: programador full stack</title>
+</head>
+
+<body>
+    <header>
+        <h1>Oferta de empleo: programador full stack</h1>
+    </header>
+
+
+    <main>
+        <form method="post" enctype="multipart/form-data" action="https://iesclaradelrey.es/utils/procesa.php">
+            <fieldset>
+                <legend>Datos de identificación y contacto</legend>
+                <div>
+                    <label>DNI: <input type="text" name="dni" required pattern="[0-9]{8}[A-Z]{1}"></label>
+                </div>
+                <div>
+                    <label>Correo electrónico: <input type="email" name="email" required></label>
+                </div>
+                <div><label>Fotografía: <input type="file" name="fotografia" accept=".jpg,.png,.jpeg"></label></div>
+            </fieldset>
+            <fieldset>
+                <legend>Datos personales</legend>
+                <div><label>Nombre: <input type="text" name="nombre" required minlength="2" maxlength="100"></label>
+                </div>
+                <div><label>Apellido: <input type="text" name="apellido1" required minlength="2"
+                            maxlength="100"></label></div>
+                <div><label>Segundo apellido: <input type="text" name="apellido2" required minlength="2"
+                            maxlength="100"></label></div>
+                <div><label>Fecha de nacimiento: <input type="date" name="fechanacimiento" required min="1958-01-01"
+                            max="2004-01-01"></label></div>
+                <div><label>Población: <input type="text" name="poblacion" required minlength="2"
+                            maxlength="50"></label></div>
+                <div>
+                    <label for="provincia"> Provincia:</label>
+                    <select name="provincia" id="provincia" required>
+                        <option value="">Seleccione...</option>
+                        <option value="02">Albacete</option>
+                        <option value="03">Alicante/Alacant</option>
+                        <option value="04">Almería</option>
+                        <option value="01">Araba/Álava</option>
+                    </select>
+                </div>
+
+            </fieldset>
+            <fieldset>
+                <legend>Experiencia profesional</legend>
+            </fieldset>
+            <fieldset>
+                <legend>Conocimientos</legend>
+                <fieldset>
+                    <legend></legend>
+                    <ul>
+                        <li><label><input type="checkbox" name="lenguajes[]" value="PY"> Python</label></li>
+                    </ul>
+                    <ul>
+                        <li><label><input type="checkbox" name="lenguajes[]" value="CS"> C#</label></li>
+                    </ul>
+                    <ul>
+                        <li><label><input type="checkbox" name="lenguajes[]" value="J"> Java</label></li>
+                    </ul>
+                </fieldset>
+            </fieldset>
+            <fieldset>
+                <legend>Formación</legend>
+                <fieldset>
+                    <legend>Postgrado</legend>
+                    <ul>
+                        <li><label><input type="radio" value="S" name="postgrado" required> Sí</label></li>
+                        <li><label><input type="radio" value="N" name="postgrado"> No</label></li>
+                    </ul>
+                </fieldset>
+                <div>
+                    <label for="estudioscompletados">Estudios completados:</label>
+                    <textarea name="estudioscompletados" id="estudioscompletados"></textarea>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Documentación</legend>
+            </fieldset>
+
+
+
+
+
+
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+    <footer>
+        <p>Clara del Rey Recruiting</p>
+        <address>C/ Padre Claret, 8. 28002 - Madrid. Tfno. 915195257</address>
+    </footer>
+
+</body>
+
+</html>

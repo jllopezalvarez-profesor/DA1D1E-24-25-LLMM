@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Pide tu pizza</h1>
+    </header>
+    <main>
+        <form action="https://iesclaradelrey.es/utils/procesa.php" method="post">
+            <fieldset>
+                <legend>Configura tu pizza</legend>
+                <fieldset>
+                    <legend>Tipo de masa</legend>
+                    <ul>
+                        <li><label><input type="radio" name="tipoMasa" value="F" required>Fina</label></li>
+                        <li><label><input type="radio" name="tipoMasa" value="G">Gruesa</label></li>
+                        <li><label><input type="radio" name="tipoMasa" value="Q">Borde relleno de queso</label></li>
+                        <li><label><input type="radio" name="tipoMasa" value="SG">Sin gluten </label></li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>Tamaño</legend>
+                    <ul>
+                        <li><label><input type="radio" name="tamanio" value="S" required>Pequeña</label></li>
+                        <li><label><input type="radio" name="tamanio" value="M">Mediana</label></li>
+                        <li><label><input type="radio" name="tamanio" value="L">Grande</label></li>
+                        <li><label><input type="radio" name="tamanio" value="XL">Gigante</label></li>
+                    </ul>
+                </fieldset>
+
+                <div>
+                    <label>
+                        Pizza base:
+                        <select name="pizzaBase" required>
+                            <option value="">Selecciona...</option>
+                            <option value="M">Margarita</option>
+                            <option value="BBQ">Barbacoa</option>
+                            <option value="4Q">Cuatro quesos</option>
+                        </select>
+                    </label>
+                </div>
+                <fieldset>
+                    <legend>Ingredientes adicionales</legend>
+                    <ul>
+                        <li><label><input type="checkbox" name="ingredientesAdicionales[]"
+                                    value="IA-PI">Pimiento</label></li>
+                        <li><label><input type="checkbox" name="ingredientesAdicionales[]" value="IA-CE">Cebolla</label>
+                        </li>
+                        <li><label><input type="checkbox" name="ingredientesAdicionales[]" value="IA-CP">Carne
+                                picada</label></li>
+                        <li><label><input type="checkbox" name="ingredientesAdicionales[]" value="IA-PL">Pollo</label>
+                        </li>
+                        <li><label><input type="checkbox" name="ingredientesAdicionales[]"
+                                    value="IA-BE">Berenjena</label></li>
+                        <li><label><input type="checkbox" name="ingredientesAdicionales[]" value="IA-XQ">Extra de
+                                queso</label></li>
+                        <li><label><input type="checkbox" name="ingredientesAdicionales[]" value="IA-BBQ">Salsa
+                                barbacoa</label></li>
+                    </ul>
+                </fieldset>
+            </fieldset>
+            <fieldset>
+                <legend>Datos de entrega</legend>
+                <div>
+                    <div><label for="nombre">Nombre:</label></div>
+                    <div><input type="text" name="nombre" id="nombre" required minlength="2" maxlength="50"></div>
+                </div>
+                <div>
+                    <div><label for="apellidos">Apellidos:</label></div>
+                    <div><input type="text" name="apellidos" id="apellidos" required minlength="2" maxlength="50"></div>
+                </div>
+                <div>
+                    <div><label for="direccion">Dirección completa:</label></div>
+                    <div><input type="text" name="direccion" id="direccion" required minlength="2" maxlength="250">
+                    </div>
+                </div>
+                <div>
+                    <div><label for="telefono">Teléfono:</label></div>
+                    <div><input type="text" name="telefono" id="telefono" required pattern="\d{9}"></div>
+                </div>
+                <div>
+                    <div><label for="observaciones">Observaciones:</label></div>
+                    <div><textarea name="observaciones" id="observaciones"></textarea></div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Método de pago</legend>
+                <div>
+                    <div>
+                        <label for="formaPago">Forma de pago</label>
+                    </div>
+                    <div>
+                        <select name="formaPago" id="formaPago" required>
+                            <option value="">Seleccione una opción...</option>
+                            <option value="T">Tarjeta bancaria</option>
+                            <option value="B">Bizum</option>
+                            <option value="P">PayPal</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+            <div><button type="submit">Enviar</button>&nbsp;&nbsp;&nbsp;<button type="reset">Limpiar formulario</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        Pizzeria Clara del Rey
+        <address>Padre Claret 8, madrid 28002</address>
+    </footer>
+
+</body>
+
+</html>
