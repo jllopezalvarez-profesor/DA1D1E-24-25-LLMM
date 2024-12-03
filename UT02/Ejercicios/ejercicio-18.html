@@ -14,6 +14,7 @@
 
 
     <main>
+        <!-- Importante: no olvidar el enctype cuando hay campos input de tipo "file" -->
         <form method="post" enctype="multipart/form-data" action="https://iesclaradelrey.es/utils/procesa.php">
             <fieldset>
                 <legend>Datos de identificación y contacto</legend>
@@ -23,21 +24,35 @@
                 <div>
                     <label>Correo electrónico: <input type="email" name="email" required></label>
                 </div>
-                <div><label>Fotografía: <input type="file" name="fotografia" accept=".jpg,.png,.jpeg"></label></div>
+                <div>
+                    <label>Fotografía: <input type="file" name="fotografia" accept=".jpg,.png,.jpeg"></label>
+                </div>
             </fieldset>
             <fieldset>
                 <legend>Datos personales</legend>
-                <div><label>Nombre: <input type="text" name="nombre" required minlength="2" maxlength="100"></label>
-                </div>
-                <div><label>Apellido: <input type="text" name="apellido1" required minlength="2"
-                            maxlength="100"></label></div>
-                <div><label>Segundo apellido: <input type="text" name="apellido2" required minlength="2"
-                            maxlength="100"></label></div>
-                <div><label>Fecha de nacimiento: <input type="date" name="fechanacimiento" required min="1958-01-01"
-                            max="2004-01-01"></label></div>
-                <div><label>Población: <input type="text" name="poblacion" required minlength="2"
-                            maxlength="50"></label></div>
                 <div>
+                    <label>Nombre: <input type="text" name="nombre" required minlength="2" maxlength="100"></label>
+                </div>
+                <div>
+                    <label>Primer apellido: <input type="text" name="apellido1" required minlength="2"
+                            maxlength="100"></label>
+                </div>
+                <div>
+                    <!-- Este campo no es obligatorio, pero si se escribe algo se aplicará en minlength y maxlength -->
+                    <label>Segundo apellido: <input type="text" name="apellido2" minlength="2" maxlength="100"></label>
+                </div>
+                <div>
+                    <!-- Importante recordar que las fechas se escriben en formato año-mes-dia -->
+                    <label>Fecha de nacimiento: <input type="date" name="fechanacimiento" required min="1958-01-01"
+                            max="2004-01-01"></label>
+                </div>
+                <div>
+                    <label>Población: <input type="text" name="poblacion" required minlength="2" maxlength="50"></label>
+                </div>
+                <div>
+                    <!-- Label asociado de forma explícita. Debe tener en el atributo "for" el id del control que etiqueta -->
+                    <!-- Como se indica en el enunciado, en la tabla de provincias, no es necesario que se pongan todas-->
+                    <!-- No olvidar que si se quiere forzar el required hay que poner una opción vacía, value="" -->
                     <label for="provincia"> Provincia:</label>
                     <select name="provincia" id="provincia" required>
                         <option value="">Seleccione...</option>
@@ -47,15 +62,15 @@
                         <option value="01">Araba/Álava</option>
                     </select>
                 </div>
-
             </fieldset>
             <fieldset>
                 <legend>Experiencia profesional</legend>
+                <p>Hay un error en el enunciado. No se indican los campos para este fieldset</p>
             </fieldset>
             <fieldset>
                 <legend>Conocimientos</legend>
                 <fieldset>
-                    <legend></legend>
+                    <legend>Lenguajes de progración</legend>
                     <ul>
                         <li><label><input type="checkbox" name="lenguajes[]" value="PY"> Python</label></li>
                     </ul>
@@ -66,23 +81,87 @@
                         <li><label><input type="checkbox" name="lenguajes[]" value="J"> Java</label></li>
                     </ul>
                 </fieldset>
+                <fieldset>
+                    <legend>Sistemas operativos</legend>
+                    <ul>
+                        <li><label><input type="checkbox" name="sitemas[]" value="W"> Windows</label></li>
+                    </ul>
+                    <ul>
+                        <li><label><input type="checkbox" name="sitemas[]" value="L"> Linux</label></li>
+                    </ul>
+                    <ul>
+                        <li><label><input type="checkbox" name="sitemas[]" value="M"> Mac OS</label></li>
+                    </ul>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Frameworks de servidor</legend>
+                    <ul>
+                        <li><label><input type="checkbox" name="fwservidor[]" value="SB"> Spring / Spring boot</label>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li><label><input type="checkbox" name="fwservidor[]" value="DJ"> Django</label></li>
+                    </ul>
+                    <ul>
+                        <li><label><input type="checkbox" name="fwservidor[]" value="LV"> Laravel</label></li>
+                    </ul>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Frameworks JavaScript / CSS</legend>
+                    <ul>
+                        <li><label><input type="checkbox" name="fwcliente[]" value="NG"> Angular</label>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li><label><input type="checkbox" name="fwcliente[]" value="RA"> React</label></li>
+                    </ul>
+                    <ul>
+                        <li><label><input type="checkbox" name="fwcliente[]" value="VUUE"> Vue</label></li>
+                    </ul>
+                </fieldset>
+
             </fieldset>
             <fieldset>
                 <legend>Formación</legend>
+                <div>
+                    <label for="nivelestudios">Nivel de estudios</label>
+                    <select name="nivelestudios" id="nivelestudios" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="SE">Sin estudios</option>
+                        <option value="PR">Primarios</option>
+                        <option value="SEC">Secundaria</option>
+                        <option value="BAC">Bachillerato</option>
+                        <option value="FPM">FP grado medio</option>
+                        <option value="FPS">FP Grado superior</option>
+                        <option value="EU">Estudios universitarios</option>
+                    </select>
+                </div>
                 <fieldset>
-                    <legend>Postgrado</legend>
+                    <legend>¿Tienes algún postgrado?</legend>
                     <ul>
-                        <li><label><input type="radio" value="S" name="postgrado" required> Sí</label></li>
-                        <li><label><input type="radio" value="N" name="postgrado"> No</label></li>
+                        <li><label><input type="radio" name="postgrado" value="S">Sí</label></li>
+                        <li><label><input type="radio" name="postgrado" value="N">No</label></li>
                     </ul>
                 </fieldset>
                 <div>
-                    <label for="estudioscompletados">Estudios completados:</label>
-                    <textarea name="estudioscompletados" id="estudioscompletados"></textarea>
+                    <label for="estudioscompletados">Estudios completados</label><textarea name="estudioscompletados"
+                        id="estudioscompletados"></textarea>
+                </div>
+                <div>
+                    <label for="estudiosincompletos">Estudios incompletos</label><textarea name="estudiosincompletos"
+                        id="estudiosincompletos"></textarea>
+                </div>
+                <div>
+                    <label for="cursosformacion">Cursos de formación</label><textarea name="cursosformacion"
+                        id="cursosformacion"></textarea>
                 </div>
             </fieldset>
             <fieldset>
                 <legend>Documentación</legend>
+                <div><label>Curriculum vitae:<input type="file" name="cv" required></label></div>
+                <div><label>Otra Documentación:<input type="file" name="doccomplementaria" multiple></label></div>
             </fieldset>
 
 
@@ -90,7 +169,7 @@
 
 
 
-            <button type="submit">Enviar</button>
+            <button type="submit">Enviar</button> <button type="reset">Reiniciar formulario</button>
         </form>
     </main>
     <footer>
