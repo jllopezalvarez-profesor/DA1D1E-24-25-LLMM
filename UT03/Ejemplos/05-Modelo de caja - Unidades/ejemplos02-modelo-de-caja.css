@@ -1,0 +1,88 @@
+/* Estilos generales para la página de ejemplos */
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 1em;
+}
+
+footer {
+    text-align: center;
+}
+
+section {
+    border: 1px solid black;
+    padding: 1em;
+    margin-bottom: 3em;
+}
+
+h2 {
+    border-bottom: 1px solid black;
+}
+
+pre {
+    margin: 0;
+    font-size: 1.25em;
+    /* white-space: normal; */
+    white-space-collapse: preserve-breaks;
+}
+
+/* Estilos para la imagen de elementos */
+
+img#img-modelo-caja {
+    width: 100%;
+    max-width: 800px;
+}
+
+div:has(img#img-modelo-caja) {
+    text-align: center;
+}
+
+/* Estilos para modelos de caja */
+
+div.content-container {
+    padding: 2em;
+}
+
+div.content {
+    width: 160px;
+    height: 80px;
+    padding: 20px;
+    border: 8px solid red;
+    background: yellow;
+}
+
+.content-box {
+    box-sizing: content-box;
+}
+
+.border-box {
+    box-sizing: border-box;
+}
+
+/* Estilos para inline -> block */
+.inline-to-block span {
+    display: block;
+}
+
+/* Estilos para block -> inline */
+.block-to-inline li {
+    display: inline;
+}
+
+/* Estilos para ejemplo de inline-block */
+.inline-block span {
+    display: inline-block;
+    width: 250px;
+    padding: 20px;
+    background-color: coral;
+    color: brown;
+    text-align: center;
+}
+
+/* Estilos para colapso de márgenes */
+.colapse-example .first-p {
+    margin-bottom: 150px;
+}
+
+.colapse-example .second-p {
+    margin-top: 100px;
+}

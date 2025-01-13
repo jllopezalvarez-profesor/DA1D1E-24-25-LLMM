@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de degradado lineal</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/css.min.js"></script>
+    <link rel="stylesheet" href="ejemplos02-modelo-de-caja.css">
+</head>
+
+<body>
+    <header>
+        <h1>Ejemplos de modelos de caja</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Elementos del modelo de caja</h2>
+            <div>
+                <img src="modelo-de-caja.png" alt="Elementos del modelo de caja" id="img-modelo-caja">
+            </div>
+        </section>
+        <section>
+            <h2>Modelo de caja "convencional" (box-sizing: content-box)</h2>
+            <pre><code class="language-css">            div.content {
+            width: 160px;
+            height: 80px;
+            padding: 20px;
+            border: 8px solid red;
+            background: yellow;
+            }
+            .content-box {
+            box-sizing: content-box;
+            }
+            </code></pre>
+            <div class="content-container">
+                <div class="content content-box">Content box</div>
+            </div>
+            <div>
+                En este caso:
+                <ul>
+                    <li>Ancho total: 160px + (2 * 20px) + (2 * 8px) = 216px</li>
+                    <li>Alto total: 80px + (2 * 20px) + (2 * 8px) = 136px</li>
+                    <li>Ancho de la caja de contenido: 160px</li>
+                    <li>Alto de la caja de contenido: 80px</li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>Modelo de caja alternativo (box-sizing: border-box)</h2>
+            <pre><code class="language-css">                        div.content-container {
+                            padding: 2em;
+                        }
+
+                        div.content {
+                            width: 160px;
+                            height: 80px;
+                            padding: 20px;
+                            border: 8px solid red;
+                            background: yellow;
+                        }
+
+                        .border-box {
+                            box-sizing: border-box;
+                        }
+                        </code></pre>
+            <div class="content-container">
+                <div class="content border-box">Border box</div>
+            </div>
+            <div>
+                En este caso:
+                <ul>
+                    <li>Ancho total: 160px</li>
+                    <li>Alto total: 80px</li>
+                    <li>Ancho de la caja de contenido: 160px - (2 * 20px) - (2 * 8px) = 104px</li>
+                    <li>Alto de la caja de contenido: 80px - (2 * 20px) - (2 * 8px) = 24px</li>
+                </ul>
+            </div>
+
+        </section>
+        <section>
+            <h2>Display (block, inline, inline-block)</h2>
+
+            <h3>Convitiendo elementos inline en block</h3>
+            <pre><code class="language-css">.inline-to-block span { display: block; }</code></pre>
+            <div>
+                <p>
+                    Cada una de las siguientes palabras están en un span, que es elemento en línea, pero se convierte a
+                    en bloque.
+                </p>
+                <p class="inline-to-block">
+                    <span>uno</span><span>dos</span><span>tres</span><span>cuatro</span><span>cinco</span>
+                </p>
+                <p>Sin convertir a elemento en bloque se ven así:</p>
+                <p>
+                    <span>uno</span><span>dos</span><span>tres</span><span>cuatro</span><span>cinco</span>
+                </p>
+            </div>
+
+            <h3>Convirtiendo elementos en bloque a elementos en línea</h3>
+            <pre><code class="language-css">.block-to-inline li { display: inline; }</code></pre>
+            <div>
+                <p>
+                    En este caso tomamos una lista, formada por elementos "li", que son en bloque, y los convertimos a
+                    elementos en línea:
+                </p>
+                <ul class="block-to-inline">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ul>
+                <p>
+                    Sin convertir a elementos en línea se ve así:
+                </p>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ul>
+                <p>Útil para convertir listas de menús de navegación, normalmente "verticales", a listas horizontales.
+                </p>
+            </div>
+
+            <h3>Dando ancho o alto a elementos en línea (inline-block)</h3>
+            <pre><code class="language-css">                .inline-block span {
+                display: inline-block;
+                width: 250px;
+                padding: 20px;
+                background-color: coral;
+                color: brown;
+                text-align: center;
+                }
+            </code></pre>
+            <div>
+                <p>
+                    En este párrafo hay varias palabras que se han metido dentro de un span para poder dar ancho,
+                    márgenes,
+                    alineación a la palabra. Se ha puesto un color de fondo para poder identificarlas claramente.
+                </p>
+                <p class="inline-block">Lorem ipsum dolor sit amet, <span>consectetur </span> adipisicing elit. Incidunt
+                    eum dolorem facere dicta quia aliquid odio. Ipsum, nemo error amet laboriosam beatae vel officia
+                    odit odio iusto cumque optio possimus. Dicta repudiandae, rem omnis magni earum hic eaque, quaerat
+                    <span>provident</span> at nam autem quisquam harum vitae enim quod delectus saepe temporibus ipsum!
+                </p>
+            </div>
+
+            <h3>Colapso de márgenes</h3>
+            <pre><code class="language-css">                .colapse-example .first-p { margin-bottom: 150px; }
+                .colapse-example .second-p { margin-top: 100px; }
+            </code></pre>
+            <div class="gradient-example gradient-advanced-05-a">
+                <p>
+                    En este caso tenemos dos párrafos, el primero tiene un margen inferior de 150 píxeles, y el segundo
+                    un margen superior de 100 píxeles. La separación entre los dos párrafos no será de 250
+                    píxeles como podríamos esperar. Será de 150, porque los márgenes colapsan y se mantiene sólo el
+                    mayor de los dos.
+                </p>
+            </div>
+            <div class="colapse-example">
+                <p class="first-p">
+                    Este es el primer párrafo, con un margen inferior de 150 píxeles.
+                </p>
+                <p class="second-p">
+                    Este segundo párrafo tiene un margen superior de 100 píxeles.
+                </p>
+            </div>
+
+
+        </section>
+
+
+    </main>
+    <footer>
+        <p>Lenguajes de marcas y sistemas de gestión de la información - IES Clara del Rey</p>
+    </footer>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>
