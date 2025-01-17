@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de tablas</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/css.min.js"></script>
+    <link rel="stylesheet" href="ejemplos02-tablas.css">
+</head>
+
+<body>
+    <header>
+        <h1>Ejemplos de tablas</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Bordes</h2>
+            <h3>Tabla sin bordes (por defecto, sin estilos)</h3>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Columna 1</th>
+                            <th scope="col">Columna 2</th>
+                            <th scope="col">Columna 3</th>
+                            <th scope="col">Columna 4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>a</td>
+                            <td>b</td>
+                            <td>c</td>
+                            <td>d</td>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>B</td>
+                            <td>C</td>
+                            <td>D</td>
+                        </tr>
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">Pie en colspan</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <h3>Tabla con borde rojo en tabla y azul en th y td, sin colapsar</h3>
+            <pre><code class="language-css">table.tabla-bordes {
+            border: 1px solid red;
+            }
+            table.tabla-bordes th,
+            table.tabla-bordes td {
+            border: 1px solid blue;
+            }</code></pre>
+            <div>
+                <table class="tabla-bordes">
+                    <thead>
+                        <tr>
+                            <th scope="col">Columna 1</th>
+                            <th scope="col">Columna 2</th>
+                            <th scope="col">Columna 3</th>
+                            <th scope="col">Columna 4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>a</td>
+                            <td>b</td>
+                            <td>c</td>
+                            <td>d</td>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>B</td>
+                            <td>C</td>
+                            <td>D</td>
+                        </tr>
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">Pie en colspan</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <p>Se pueden observar los dos bordes diferenciados, y como hay espacio entre las celdas. Este espacio se
+                    puede ampliar con border-spacing. </p>
+            </div>
+            <h3>Tabla por defecto (sin estilos)</h3>
+            <pre><code class="language-css">table.tabla-bordes {
+            border: 1px solid red;
+            }
+            table.tabla-bordes th,
+            table.tabla-bordes td {
+            border: 1px solid blue;
+            }
+            table.colapsado {
+            border-collapse: collapse;
+            }</code></pre>
+            <div>
+                <table class="tabla-bordes colapsado">
+                    <thead>
+                        <tr>
+                            <th scope="col">Columna 1</th>
+                            <th scope="col">Columna 2</th>
+                            <th scope="col">Columna 3</th>
+                            <th scope="col">Columna 4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>a</td>
+                            <td>b</td>
+                            <td>c</td>
+                            <td>d</td>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>B</td>
+                            <td>C</td>
+                            <td>D</td>
+                        </tr>
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">Pie en colspan</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <p>En este caso los espacios entre bordes desaparecen. Si se usa border-spacing, se ignora, porque solo
+                    funciona con bordes no colapsados.</p>
+            </div>
+            <h3>Tabla en la que no se muestran los bordes de las celdas vacías</h3>
+            <pre><code class="language-css">table.tabla-bordes-no-vacias {
+            border: 1px solid blue;
+            empty-cells: hide;
+            }
+            table.tabla-bordes-no-vacias th,
+            table.tabla-bordes-no-vacias td {
+            border: 1px solid blue;
+            }</code></pre>
+            <div>
+                <table class="tabla-bordes-no-vacias">
+                    <thead>
+                        <tr>
+                            <th scope="col">Columna 1</th>
+                            <th scope="col">Columna 2</th>
+                            <th scope="col">Columna 3</th>
+                            <th scope="col">Columna 4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td></td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>a</td>
+                            <td>b</td>
+                            <td>c</td>
+                            <td>d</td>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td></td>
+                            <td>C</td>
+                            <td></td>
+                        </tr>
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">Pie en colspan</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <p>Por defecto, se muestan los bordes de las celdas vacías.</p>
+            </div>
+        </section>
+        <section>
+            <h2>Posición del título</h2>
+            <h3>Tabla con el título debajo de la tabla</h3>
+            <pre><code class="language-css">table.table-titulo-abajo {
+            caption-side: bottom;
+            }</code></pre>
+            <div>
+                <table class="table-titulo-abajo">
+                    <caption>Título de la tabla</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Columna 1</th>
+                            <th scope="col">Columna 2</th>
+                            <th scope="col">Columna 3</th>
+                            <th scope="col">Columna 4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>a</td>
+                            <td>b</td>
+                            <td>c</td>
+                            <td>d</td>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>B</td>
+                            <td>C</td>
+                            <td>D</td>
+                        </tr>
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">Pie en colspan</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <p>Por defecto, el título se coloca encima de la tabla</p>
+            </div>
+        </section>
+        <section>
+            <h2>Ajuste al ancho</h2>
+            <h3>Tabla que se ajusta al tamaño de la ventana con el algoritmo "auto" (valor por defecto)</h3>
+            <pre><code class="language-css">table.table-layout-auto th,
+            table.table-layout-auto td {
+            border: 1px solid blue;
+            }</code></pre>
+            <div>
+                <table class="table-layout-auto">
+                    <thead>
+                        <tr>
+                            <th scope="col">Columna 1</th>
+                            <th scope="col">Columna 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lorem ipsum dolor sit amet consectetur.
+                            </td>
+                            <td>Voluptas modi qui, corrupti dolorem reiciendis ipsam quas dolor itaque vitae neque.</td>
+                        </tr>
+                        <tr>
+                            <td>Temporibus ut reprehenderit labore, officia magnam, sed consequatur natus autem incidunt
+                                voluptatem quisquam rerum? </td>
+                            <td>Soluta alias molestias delectus tempore nobis numquam!</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">Pie en colspan</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <p>Los estilos que se han puesto no modifican table-layout. Son para que se vean los bordes de las
+                    celdas.</p>
+            </div>
+            <h3>Tabla que se ajusta al tamaño de la ventana con el algoritmo "fixed"</h3>
+            <pre><code class="language-css">table.table-layout-fixed {
+            table-layout: fixed;
+            width: 100%;
+            }
+            table.table-layout-fixed th,
+            table.table-layout-fixed td {
+            border: 1px solid blue;
+            }</code></pre>
+            <div>
+                <table class="table-layout-fixed">
+                    <thead>
+                        <tr>
+                            <th scope="col">Columna 1</th>
+                            <th scope="col">Columna 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lorem ipsum dolor sit amet consectetur.
+                            </td>
+                            <td>Voluptas modi qui, corrupti dolorem reiciendis ipsam quas dolor itaque vitae neque.</td>
+                        </tr>
+                        <tr>
+                            <td>Temporibus ut reprehenderit labore, officia magnam, sed consequatur natus autem incidunt
+                                voluptatem quisquam rerum? </td>
+                            <td>Soluta alias molestias delectus tempore nobis numquam!</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">Pie en colspan</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <p>Cuando se usa "fixed", hay que dar un ancho a la tabla, si no, no se aplica ese algoritmo.</p>
+                <p>Más información sobre los dos algoritmos: <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout"
+                        target="_blank">table-layout - CSS: Cascading Style Sheets | MDN</a> </p>
+            </div>
+
+        </section>
+
+
+    </main>
+    <footer>
+        <p>Lenguajes de marcas y sistemas de gestión de la información - IES Clara del Rey</p>
+    </footer>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

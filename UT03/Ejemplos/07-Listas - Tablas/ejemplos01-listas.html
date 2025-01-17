@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de listas</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/css.min.js"></script>
+    <link rel="stylesheet" href="ejemplos01-listas.css">
+</head>
+
+<body>
+    <header>
+        <h1>Ejemplos de listas</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Cambiar el bullet (icono) o numeración de la lista</h2>
+            <h3>Bullet cuadrado</h3>
+            <pre><code class="language-css">ul.lista-cuadrados { list-style-type: square; } </code></pre>
+            <div>
+                <ul class="lista-cuadrados">
+                    <li>Primer elemento</li>
+                    <li>Segundo elemento</li>
+                    <li>Tercer elemento</li>
+                </ul>
+            </div>
+            <h3>Bullet con "flecha" a la derecha</h3>
+            <pre><code class="language-css">ul.lista-flecha-derecha { list-style-type: disclosure-closed; } </code></pre>
+            <div>
+                <ul class="lista-flecha-derecha">
+                    <li>Primer elemento</li>
+                    <li>Segundo elemento</li>
+                    <li>Tercer elemento</li>
+                </ul>
+            </div>
+            <h3>Lista numerada con letras mayúsculas</h3>
+            <pre><code class="language-css">ol.lista-num-mayusculas { list-style-type: upper-alpha; }</code></pre>
+            <div>
+                <ol class="lista-num-mayusculas">
+                    <li>Primer elemento</li>
+                    <li>Segundo elemento</li>
+                    <li>Tercer elemento</li>
+                </ol>
+            </div>
+            <h3>Lista con iconos UTF</h3>
+            <pre><code class="language-css">ul.lista-iconos-utf { list-style-type: '🇪🇦'; }
+                ul.lista-iconos-utf li.diferente { list-style-type: '🏴‍☠️'; }</code></pre>
+            <div>
+                <ul class="lista-iconos-utf">
+                    <li>Primer elemento</li>
+                    <li class="diferente">Segundo elemento (diferente)</li>
+                    <li>Tercer elemento</li>
+                </ul>
+            </div>
+            <h3>Lista que usa una lista de símbolos UTF-8</h3>
+            <pre><code class="language-css">ul.lista-simbolos { list-style: symbols("🌟" "🔥" "💎"); }</code></pre>
+            <div>
+                <ul class="lista-simbolos">
+                    <li>Primer elemento</li>
+                    <li>Segundo elemento</li>
+                    <li>Tercer elemento</li>
+                    <li>Cuarto elemento</li>
+                    <li>Quinto elemento</li>
+                    <li>Sexto elemento</li>
+                    <li>Séptimo elemento</li>
+                    <li>Octavo elemento</li>
+                </ul>
+            </div>
+            <div>
+                <p>Los elementos se repiten por el comportamiento por defecto de la función "symbols"</p>
+            </div>
+            <h3>Lista con imágenes como iconos</h3>
+            <pre><code class="language-css">ul.lista-iconos-img { list-style-image: url(list-icon-ball.png); }</code></pre>
+            <div>
+                <ul class="lista-iconos-img">
+                    <li>Primer elemento</li>
+                    <li>Segundo elemento</li>
+                    <li>Tercer elemento</li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>Ubicación del marcador de lista (bullet, símbolo, número, etc.)</h2>
+            <p>Aunque en la documentación del aula virtual se indica que list-style-position debe aplicarse a los li, se
+                puede aplicar sobre el contendor (ol, ul) y se hereda en los li. Esta restricción es de anteriores
+                versiones de CSS.</p>
+
+            <h3>Outside (valor por defecto)</h3>
+            <pre><code class="language-css">ul.outside { list-style-position: outside; }</code></pre>
+            <div>
+                <ul class="outside">
+                    <li>Primer elemento. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam pariatur
+                        itaque, id delectus deleniti soluta tenetur praesentium omnis explicabo aut. Obcaecati ut, minus
+                        tempora officia deleniti cumque sapiente? Tenetur, adipisci!</li>
+                    <li>Segundo elemento. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id magnam modi esse.
+                        Repellat inventore omnis esse numquam nihil ducimus ab modi reiciendis culpa, eveniet quis ut
+                        aut voluptate quae! Nemo.</li>
+                    <li>Tercer elemento. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem magnam laboriosam
+                        consectetur, adipisci recusandae mollitia debitis quod tempora sequi quibusdam molestiae
+                        similique earum nisi, voluptatem cumque quidem fugit maiores corporis.</li>
+                </ul>
+            </div>
+
+            <h3>Inside</h3>
+            <pre><code class="language-css">ul.outside { list-style-position: outside; }</code></pre>
+            <div>
+                <ul class="inside">
+                    <li>Primer elemento. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam pariatur
+                        itaque, id delectus deleniti soluta tenetur praesentium omnis explicabo aut. Obcaecati ut, minus
+                        tempora officia deleniti cumque sapiente? Tenetur, adipisci!</li>
+                    <li>Segundo elemento. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id magnam modi esse.
+                        Repellat inventore omnis esse numquam nihil ducimus ab modi reiciendis culpa, eveniet quis ut
+                        aut voluptate quae! Nemo.</li>
+                    <li>Tercer elemento. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem
+                        magnam laboriosam
+                        consectetur, adipisci recusandae mollitia debitis quod tempora sequi quibusdam molestiae
+                        similique earum nisi, voluptatem cumque quidem fugit maiores corporis.</li>
+                </ul>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <p>Lenguajes de marcas y sistemas de gestión de la información - IES Clara del Rey</p>
+    </footer>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

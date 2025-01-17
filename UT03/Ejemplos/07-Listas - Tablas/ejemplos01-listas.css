@@ -1,0 +1,64 @@
+/* Estilos generales para la página de ejemplos */
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 1em;
+}
+
+footer {
+    text-align: center;
+}
+
+section {
+    border: 1px solid black;
+    padding: 1em;
+    margin-bottom: 3em;
+}
+
+h2 {
+    border-bottom: 1px solid black;
+}
+
+pre {
+    margin: 0;
+    font-size: 1.25em;
+    /* white-space: normal; */
+    white-space-collapse: preserve-breaks;
+}
+
+/* Listas con iconos diferentes */
+ul.lista-cuadrados {
+    list-style-type: square;
+}
+
+ul.lista-flecha-derecha {
+    list-style-type: disclosure-closed;
+}
+
+ol.lista-num-mayusculas {
+    list-style-type: upper-alpha;
+}
+
+ul.lista-iconos-utf {
+    list-style-type: '🇪🇦';
+}
+
+ul.lista-iconos-utf li.diferente {
+    list-style-type: '🏴‍☠️';
+}
+
+ul.lista-simbolos {
+    list-style: symbols("🌟" "🔥" "💎");
+}
+
+ul.lista-iconos-img {
+    list-style-image: url(list-icon-ball.png);
+}
+
+/* Ubicación del bullet */
+ul.outside li {
+    list-style-position: outside;
+}
+
+ul.inside li {
+    list-style-position: inside;
+}

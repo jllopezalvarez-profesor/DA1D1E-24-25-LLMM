@@ -1,0 +1,84 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* header,
+main,
+footer {
+    margin: 0;
+    padding: 0;
+} */
+
+h1 {
+    margin: 0;
+}
+
+header,
+footer {
+    background-color: rgb(5%, 0%, 50%);
+}
+
+main {
+    background-color: rgb(5%, 0%, 50%, 0.1);
+    overflow: auto;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+table {
+    border: 3px rgb(5%, 0%, 50%) solid;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px dashed rgb(5%, 0%, 50%);
+    text-align: center;
+}
+
+td {
+    font-size: 80%;
+    /* Esto es lo mismo que la anterior declaración*/
+    font-size: 0.8em;
+}
+
+td span,
+td div {
+    font-weight: bold;
+    display: block;
+}
+
+/* Faltarían reglas para el resto de módulos */
+td.ipe {
+    background-color: #f58725;
+}
+
+table>thead>tr {
+    background-color: white;
+}
+
+table>thead>tr>td {
+    border-right: none;
+}
+
+table th {
+    border-left: none;
+}
+
+footer {
+    color: hsl(60, 100%, 50%);
+    text-align: center;
+
+}
+
+footer>address {
+    color: #ffae00;
+}
+
+footer>p {
+    margin-top: 0;
+}
