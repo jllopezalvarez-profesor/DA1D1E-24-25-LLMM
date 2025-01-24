@@ -1,0 +1,102 @@
+/* Estilos generales para la página de ejemplos */
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 1em;
+}
+
+footer {
+    text-align: center;
+}
+
+section {
+    border: 1px solid black;
+    padding: 1em;
+    margin-bottom: 3em;
+}
+
+h2 {
+    border-bottom: 1px solid black;
+}
+
+pre {
+    margin: 0;
+    font-size: 1.25em;
+    /* white-space: normal; */
+    white-space-collapse: preserve-breaks;
+}
+
+/* Estilos para pseudoclases de interacción */
+a.a-interaccion:hover {
+    color: lightgreen;
+    background-color: black;
+}
+
+a.a-interaccion:active {
+    color: chartreuse;
+    background-color: coral;
+}
+
+a.a-interaccion:focus {
+    color: crimson;
+    background-color: lightskyblue;
+}
+
+
+p.p-focus-within {
+    background-color: lightgreen;
+    padding: 30px;
+}
+
+p.p-focus-within:focus-within {
+    background-color: mediumseagreen;
+}
+
+ul.first-last-child :first-child {
+    background-color: mediumseagreen;
+    color: green;
+}
+
+ul.first-last-child :last-child {
+    background-color: mediumblue;
+    color: lightblue;
+}
+
+ul.nth-child-3 :nth-child(3) {
+    background-color: mediumseagreen;
+    color: green;
+}
+
+ul.nth-child-3n :nth-child(3n) {
+    background-color: mediumseagreen;
+    color: green;
+}
+
+label {
+    display: inline-block;
+    padding: .5em;
+}
+
+.ejemplos-estado input:read-only,
+.ejemplos-estado select:read-only {
+    background-color: crimson;
+    color: white;
+}
+
+.ejemplos-estado input:disabled,
+.ejemplos-estado select:disabled {
+    background-color: gray;
+    color: white;
+}
+
+.ejemplos-validacion input:required {
+    border: 1px solid red;
+}
+
+.ejemplos-validacion select:required {
+    border: 1px solid red;
+}
+
+.ejemplos-validacion :user-invalid {
+    background-color: lightsalmon;
+    color: darkred;
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de pseudoclases</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/css.min.js"></script>
+    <link rel="stylesheet" href="ejemplos01-pseudoclases.css">
+</head>
+
+<body>
+    <header>
+        <h1>Ejemplos de pseudoclases</h1>
+    </header>
+    <main>
+        <section>
+            <h2>De interacción</h2>
+            <h3>Al pasar por encima (:hover), al hacer clic (:active) y al hacer foco (:focus)</h3>
+            <pre><code class="language-css">a.a-interaccion:hover {
+            color: lightgreen;
+            background-color: black;
+            }
+            a.a-interaccion:active {
+            color: chartreuse;
+            background-color: coral;
+            }
+            a.a-interaccion:focus {
+            color: crimson;
+            background-color: lightskyblue;
+            }</code></pre>
+            <div>
+                <p><a class="a-interaccion" href="#!">Enlace que no va a ningún sitio</a></p>
+            </div>
+            <h3>Al hacer foco en elemento interior (:focus-within)</h3>
+            <pre><code class="language-css">p.p-focus-within {
+            background-color: lightgreen;
+            padding: 30px;
+            }
+            p.p-focus-within:focus-within {
+            background-color: mediumseagreen;
+            }</code></pre>
+            <div>
+                <p class="p-focus-within"><a href="#!">Enlace que no va a ningún sitio</a></p>
+            </div>
+            <p>En este caso, la pseudoclase está en el párrafo que contiene el enlace. Cuando se hace foco en el enlace,
+                su contenedor (el p), cambia.</p>
+        </section>
+        <section>
+            <h2>De estructura</h2>
+            <h3>Primer hijo (:first-child) y último hijo (:last-child) de un elemento.</h3>
+            <pre><code class="language-css">ul.first-last-child :first-child {
+            background-color: mediumseagreen;
+            color: green;
+            }
+            ul.first-last-child :last-child {
+            background-color: mediumblue;
+            color: lightblue;
+            }</code></pre>
+            <div>
+                <ul class="first-last-child">
+                    <li>Elemento 1</li>
+                    <li>Elemento 2
+                        <ul>
+                            <li>Elemento 2.1</li>
+                            <li>Elemento 2.2</li>
+                            <li>Elemento 2.3</li>
+                            <li>Elemento 2.4</li>
+                        </ul>
+                    </li>
+                    <li>Elemento 3</li>
+                    <li>Elemento 4</li>
+                    <li>Elemento 5</li>
+                </ul>
+                <p>Aunque aquí sólo hay li dentro del padre (ul), si tuviéramos un contenedor con otros tipos de
+                    elementos mezclados, se elige el primero o el último, independientemente del tipo de elemento.</p>
+                <p>Por eso toda la lista interior está en color azul, porque es el último del segundo li de la lista
+                    exterior.</p>
+                <p>Esto pasa porque :first-child equivale a *:first-child. Si se usar li:first-child, no se comporta de
+                    la misma manera</p>
+                <p>Si se quiere hacer con tipos específicos, usar first-of-type o last-of-type, o usar
+                    elemento:first-child o elemento:last:child</p>
+            </div>
+            <h3>Enésimo hijo (nth-child(x)).</h3>
+            <pre><code class="language-css">ul.nth-child-3 :nth-child(3) {
+            background-color: mediumseagreen;
+            color: green;
+            }</code></pre>
+            <div>
+                <ul class="nth-child-3">
+                    <li>Elemento 1</li>
+                    <li>Elemento 2</li>
+                    <li>Elemento 3</li>
+                    <li>Elemento 4</li>
+                    <li>Elemento 5</li>
+                    <li>Elemento 6</li>
+                    <li>Elemento 7</li>
+                    <li>Elemento 8</li>
+                </ul>
+                <p>En este caso es el tercer hijo. Sólo selecciona 1</p>
+            </div>
+            <h3>Repetir cada n (nth-child(xn)).</h3>
+            <pre><code class="language-css">ul.nth-child-3n :nth-child(3n) {
+            background-color: mediumseagreen;
+            color: green;
+            }</code></pre>
+            <div>
+                <ul class="nth-child-3n">
+                    <li>Elemento 1</li>
+                    <li>Elemento 2</li>
+                    <li>Elemento 3</li>
+                    <li>Elemento 4</li>
+                    <li>Elemento 5</li>
+                    <li>Elemento 6</li>
+                    <li>Elemento 7</li>
+                    <li>Elemento 8</li>
+                </ul>
+                <p>En este caso, cada tres elementos se aplica el estilo</p>
+            </div>
+        </section>
+        <section>
+            <h2>De formularios - estado</h2>
+            <h3>:disabled, :enabled, :read-only, :read-write</h3>
+            <pre><code class="language-css">input:read-only,
+            select:read-only {
+            background-color: crimson;
+            color: white;
+            }
+            
+            input:disabled,
+            select:disabled {
+            background-color: gray;
+            color: white;
+            }</code></pre>
+            <div>
+                <form onsubmit="javascript:event.preventDefault()" class="ejemplos-estado">
+                    <div>
+                        <label>Campo de texto desabilitado: <input type="text" name="texto-deshabilitado" disabled
+                                value="valor del campo"></label>
+                    </div>
+                    <div>
+                        <label>Campo de texto read only: <input type="text" name="texto-readonly" readonly
+                                value="valor del campo"></label>
+                    </div>
+                    <div>
+                        <label>Campo de texto habilitado: <input type="text" name="texto-habilitado"
+                                value="valor del campo"></label>
+                    </div>
+                    <div>
+                        <label> Select deshabilitado:
+                            <select name="lista-disabled" disabled>
+                                <option value="1">Uno</option>
+                                <option value="2" selected>Dos</option>
+                                <option value="3">Tres</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div>
+                        <label> Select "normal":
+                            <select name="lista-normal">
+                                <option value="1">Uno</option>
+                                <option value="2" selected>Dos</option>
+                                <option value="3">Tres</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <button type="submit">Enviar el formulario</button>
+                </form>
+                <p>
+                    Los select no pueden tener el atributo "readonly" (no lo permite el estándar).Son
+                    por naturaleza "read-only". Son en realidad inmutables, no podemos cambiar sus
+                    valores, solo seleccionar uno. Aparecen con estilos read-only (si se ha creado una regla), aunque no
+                    tenga
+                    atributo "readonly". En los select disabled no se puede interactuar con la lista, pero en los
+                    readonly sí.</p>
+                <p>
+                    Ojo con disabled y read only. El orden de las pseudoclases en el css importa.</p>
+                <p>
+                    Disabled se considera, siempre, también "read-only". Tiene sentido, porque un campo deshabilitado es
+                    como un read only, solo que limita aún más la interacción.</p>
+                <p>
+                    Si ponemos los estilos para read-only después de los de disabled, veremos que los de disabled no
+                    aplican. Porque como todo disabled es read-only, se aplica la última regla.</p>
+                <p>
+                    Hay que usar el orden adecuado, o selectores más específicos</p>
+
+            </div>
+        </section>
+        <section>
+            <h2>De formularios - validación</h2>
+            <h3>:required, :user-invalid</h3>
+            <pre><code class="language-css"></code></pre>
+            <div>
+                <form onsubmit="javascript:event.preventDefault()" class="ejemplos-validacion">
+                    <div>
+                        <label>Campo de texto obligatorio: <input type="text" name="texto" required></label>
+                    </div>
+                    <div>
+                        <label> Select obligatorio:
+                            <select name="numero" required>
+                                <option value="">Selecciona un número</option>
+                                <option value="1">Uno</option>
+                                <option value="2" selected>Dos</option>
+                                <option value="3">Tres</option>
+                            </select>
+                        </label>
+                    </div>
+                    <button type="submit">Enviar el formulario</button>
+                </form>
+                <p>
+                    En general, es mejor usar ":user-invalid" frente a ":invalid". Si se usa ":invalid" el campo aparece
+                    como erróneo desde el primer momento. Con ":user-invalid" aparece como erróneo sólo si el usuario ha
+                    interactuado con el campo.
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Lenguajes de marcas y sistemas de gestión de la información - IES Clara del Rey</p>
+    </footer>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>
