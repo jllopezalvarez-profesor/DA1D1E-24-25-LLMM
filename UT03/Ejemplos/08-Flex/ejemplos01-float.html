@@ -96,7 +96,7 @@
             float: right;
             }</code></pre>
             <p>
-                Flotado a la izquierda de todos los div dentro del contenedor con id "float-right-container".
+                Flotado a la derecha de todos los div dentro del contenedor con id "float-right-container".
             </p>
             <div id="float-right-container" class="float-container">
                 <div class="float-1">DIV flotado (1)</div>
@@ -106,13 +106,18 @@
             </div>
             <p>Este párrafo, aunque esté detrás del contenedor, se coloca al lado del último elemento flotado.</p>
             <p>Este otro, también</p>
-            <p>Y este. Se colocan hacia la izquierda porque el último flotado era "left"</p>
+            <p>Y este. Se colocan a la izquierda porque el último flotado era "right". Esto puede parecer
+                contra-intuitivo, pero lo que pasa es que se van "apilando" de derecha a izquierda.</p>
             <p class="clear-both">
                 Este ya no se coloca a continuación, porque incluye "clear: both", de forma que se "resetea" el flotado.
             </p>
 
             <h3>Flotado a ambos lados</h3>
-            <pre><code class="language-css">#float-right-container div {
+            <pre><code class="language-css">#float-alt-container div.float-left {
+            float: left;
+            }
+            
+            #float-alt-container div.float-right {
             float: right;
             }</code></pre>
             <p>
@@ -140,10 +145,11 @@
                 "https://dummyimage.com/anchoxalto/color-fondo/color-texto". Ejemplo:
                 "https://dummyimage.com/1280x720/fff/aaa". </p>
             <h3>Flotado de imagen a la izquierda, dentro de un párrafo de texto</h3>
-            <pre><code class="language-css"></code></pre>
+            <pre><code class="language-css">.img-left {
+            float: left;
+            padding: 0 1em 1em 0;
+            }</code></pre>
             <div>
-
-
                 <p>
                     Este es un ejemplo de una imagen flotada a la izquierda. El texto fluye alrededor de la imagen,
                     ocupando el espacio restante a la izquierda.
@@ -164,7 +170,10 @@
             </div>
 
             <h3>Flotado de imagen a la derecha, dentro de un párrafo de texto</h3>
-            <pre><code class="language-css"></code></pre>
+            <pre><code class="language-css">.img-right {
+            float: right;
+            padding: 0 0 1em 1em;
+            }</code></pre>
             <div>
                 <p>
                     Este es un ejemplo de una imagen flotada a la derecha. El texto fluye alrededor de la imagen,
@@ -182,7 +191,15 @@
             </div>
 
             <h3>Flotado alrededor de una imagen circular</h3>
-            <pre><code class="language-css"></code></pre>
+            <pre><code class="language-css">.img-circle {
+            float: left;
+            width: 200px;
+            height: 200px;
+            margin: 10px 15px 10px 0;
+            border-radius: 50%;
+            clip-path: circle(50%);
+            shape-outside: circle(50%);
+            }</code></pre>
             <div>
                 <p><img src="https://dummyimage.com/200x200/ccc/000" alt="Imagen circular" class="img-circle">
                     La imagen en realidad es cuadrada, pero se le da forma circular con "clip-path", y se indica que se
