@@ -1,0 +1,107 @@
+/* Estilos generales para la página de ejemplos */
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 1em;
+}
+
+footer {
+    text-align: center;
+}
+
+section {
+    border: 1px solid black;
+    padding: 1em;
+    margin-bottom: 3em;
+}
+
+h2 {
+    border-bottom: 1px solid black;
+}
+
+pre {
+    margin: 0;
+    font-size: 1.25em;
+    /* white-space: normal; */
+    white-space-collapse: preserve-breaks;
+}
+
+/* Clase para dar color al borde del contenedor con los elementos flotados */
+.float-container {
+    border: 1px solid red;
+    background-color: rgb(255, 0, 0, 10%);
+}
+
+/* Colores y padding para los elementos flotados */
+.float-1 {
+    padding: 6em 2em;
+    background-color: lightgreen;
+}
+
+.float-2 {
+    padding: 4em 2em;
+    background-color: lightcoral;
+}
+
+.float-3 {
+    padding: 3em 2em;
+    background-color: lightseagreen;
+}
+
+.float-4 {
+    padding: 5em 2em;
+    background-color: lightslategray;
+}
+
+/* Clases para finalizar el flotado */
+.clear-left {
+    clear: left;
+}
+
+.clear-right {
+    clear: right;
+}
+
+.clear-both {
+    clear: both;
+}
+
+/* Flotado a la izquierda de todos los div dentro del contenedor con id "float-left-container" */
+#float-left-container div {
+    float: left;
+}
+
+/* Flotado a la izquierda de todos los div dentro del contenedor con id "float-right-container" */
+#float-right-container div {
+    float: right;
+}
+
+/* Flotado a la izquierda / derecha alternativamente de los div dentro del contenedor con id "float-alt-container" */
+#float-alt-container div.float-left {
+    float: left;
+}
+
+#float-alt-container div.float-right {
+    float: right;
+}
+
+/* Flotado de imágenes */
+.img-left {
+    float: left;
+    padding: 0 1em 1em 0;
+}
+
+.img-right {
+    float: right;
+    padding: 0 0 1em 1em;
+}
+
+/* Imagen  */
+.img-circle {
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 10px 15px 10px 0;
+    border-radius: 50%;
+    clip-path: circle(50%);
+    shape-outside: circle(50%);
+}

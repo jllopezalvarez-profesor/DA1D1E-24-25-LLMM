@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabaja con nosotros</title>
+    <link rel="stylesheet" href="ejercicio-05.css">
+</head>
+
+<body>
+    <header>
+        <h1>Trabaja con nosotros</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="!#" onclick="event.preventDefault()">Inicio</a></li>
+            <li><a href="!#" onclick="event.preventDefault()">Misión</a></li>
+            <li><a href="!#" onclick="event.preventDefault()">Visión</a></li>
+            <li><a href="!#" onclick="event.preventDefault()">Valores</a></li>
+            <li><a href="!#" onclick="event.preventDefault()">Trabaja con nosotros</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form>
+            <div><label for="nombre">Nombre: </label><input type="text" name="nombre" id="nombre" required
+                    minlength="3"></div>
+            <div><label for="apellido">Apellido: </label><input type="text" name="apellido" id="apellido" required
+                    minlength="3"></div>
+            <div><label for="edad">Edad: </label><input type="number" name="edad" id="edad" required min="18" max="70">
+            </div>
+            <div><label for="area">Area: </label><select name="area" id="area" required>
+                    <option value="">Seleccione...</option>
+                    <option value="1">Desarrollo</option>
+                    <option value="2">Sistemas</option>
+                    <option value="3">Administracion</option>
+                </select>
+            </div>
+            <fieldset>
+                <legend>Forma preferida de contacto:</legend>
+                <ul class="contact-options">
+                    <li><label><input type="radio" name="contacto" required>Correo electrónico</label></li>
+                    <li><label><input type="radio" name="contacto">Teléfono</label></li>
+                    <li><label><input type="radio" name="contacto">Whatsapp o SMS</label></li>
+                </ul>
+            </fieldset>
+            <div><label for="cv">Curriculum vitae: </label><input type="file" name="cv" id="cv" required> </div>
+            <button type="submit">Aceptar</button>
+        </form>
+
+    </main>
+    <footer></footer>
+</body>
+
+</html>

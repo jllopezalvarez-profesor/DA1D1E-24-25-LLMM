@@ -1,0 +1,10 @@
+/* Todos los párrafos (<p>) que son hermanos de (<p>) deben tener un color de texto verde (color: green). Utiliza selectores adyacentes. */
+/* Los párrafos con la clase text-indent deben tener un desplazamiento de la primera línea de 30px. */
+/* Los párrafos con la clase text-align deben alinear el texto a la derecha. */
+/* Los párrafos con la clase text-decoration deben tener un efecto de subrayado. */
+/* Los párrafos con la clase letter-spacing deben tener un espacio entre caracteres de 3px. */
+/* Los párrafos con la clase word-spacing deben tener un espacio entre palabras de 10px. */
+/* Los párrafos con la clase text-transform deben transformar el texto a mayúsculas. */
+/* Los párrafos con la clase line-height deben tener un espacio entre líneas de 70px. */
+/* Las celdas (<td>) de la tabla deben tener una altura de 100px y un borde de 1px sólido de color gris (height: 100px; border: 1px solid grey). */
+/* Las celdas de clase a, b, y c deben alinearse verticalmente de acuerdo a su clase (vertical-align: top, vertical-align: middle, vertical-align: bottom respectivamente). */
