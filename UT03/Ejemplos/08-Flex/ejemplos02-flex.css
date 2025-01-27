@@ -1,0 +1,124 @@
+/* Estilos generales para la página de ejemplos */
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 1em;
+}
+
+footer {
+    text-align: center;
+}
+
+section {
+    border: 1px solid black;
+    padding: 1em;
+    margin-bottom: 3em;
+}
+
+h2 {
+    border-bottom: 1px solid black;
+}
+
+pre {
+    margin: 0;
+    font-size: 1.25em;
+    /* white-space: normal; */
+    white-space-collapse: preserve-breaks;
+}
+
+/* Clase para reglas básicas del contenedor flex en bloque */
+.flex-container {
+    border: 1px solid red;
+    background-color: rgb(255, 0, 0, 10%);
+    display: flex;
+}
+
+/* Clase para reglas básicas del contenedor flex en bloque */
+.inline-flex-container {
+    border: 1px solid red;
+    background-color: rgb(255, 0, 0, 10%);
+    display: inline-flex;
+}
+
+/* Colores y padding para los elementos flotados */
+.flex-item-1 {
+    text-wrap: nowrap;
+    padding: 6em 1em;
+    background-color: lightgreen;
+}
+
+.flex-item-2 {
+    text-wrap: nowrap;
+    padding: 4em 3em;
+    background-color: lightcoral;
+}
+
+.flex-item-3 {
+    text-wrap: nowrap;
+    padding: 3em 5em;
+    background-color: lightseagreen;
+}
+
+.flex-item-4 {
+    text-wrap: nowrap;
+    padding: 5em 2em;
+    background-color: lightgoldenrodyellow;
+}
+
+.flex-item-5 {
+    text-wrap: nowrap;
+    padding: 3em 1em;
+    background-color: lightslategray;
+}
+
+.flex-item-6 {
+    text-wrap: nowrap;
+    padding: 6em 3em;
+    background-color: lightyellow;
+}
+
+/* Direcciónes y sentidos de eje */
+.flex-direction-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.flex-direction-column-reverse {
+    flex-direction: column-reverse;
+}
+
+/* Wrap de elementos */
+.flex-wrap-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-wrap-wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+/* Justificación (distribución) de elementos en eje principal */
+.flex-justify-start {
+    justify-content: start;
+}
+
+.flex-justify-end {
+    justify-content: end;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+.flex-justify-between {
+    justify-content: space-between;
+}
+
+.flex-justify-around {
+    justify-content: space-around;
+}
+
+.flex-justify-evenly {
+    justify-content: space-evenly;
+}

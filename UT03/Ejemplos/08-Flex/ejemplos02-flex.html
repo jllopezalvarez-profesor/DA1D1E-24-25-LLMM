@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de uso de flex</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/css.min.js"></script>
+    <link rel="stylesheet" href="ejemplos02-flex.css">
+</head>
+
+<body>
+    <header>
+        <h1>Ejemplos de uso de flex</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Estilos comunes para los ejemplos</h2>
+            <p>Para los ejemplos, vamos a usar 6 elementos div, con distintas alturas y anchos, definidos por sus
+                padding. Estos elementos tendrán diferentes colores, para identificar correctamente los límites, y
+                apreciar cómo se distribuyen los elementos. </p>
+            <p>Además, el contenedor flex tendrá un fondo rosa claro (rojo al 10% de saturación) y un borde, para poder
+                identificar las diferencias con float.</p>
+            <p>Estos son los estilos básicos para los elementos y los contenedores que se posicionaran con flex. Se
+                añadirán estilos con clases css adicionales en cad ejemplo.</p>
+            <pre><code class="language-css">/* Clase para reglas básicas del contenedor flex en bloque */
+            .flex-container {
+            border: 1px solid red;
+            background-color: rgb(255, 0, 0, 10%);
+            display: flex;
+            }
+            
+            /* Clase para reglas básicas del contenedor flex en bloque */
+            .inline-flex-container {
+            border: 1px solid red;
+            background-color: rgb(255, 0, 0, 10%);
+            display: inline-flex;
+            }
+            
+            /* Colores y padding para los elementos flotados */
+            .flex-item-1 {
+            text-wrap: nowrap;
+            padding: 6em 1em;
+            background-color: lightgreen;
+            }
+            
+            .flex-item-2 {
+            text-wrap: nowrap;
+            padding: 4em 3em;
+            background-color: lightcoral;
+            }
+            
+            .flex-item-3 {
+            text-wrap: nowrap;
+            padding: 3em 5em;
+            background-color: lightseagreen;
+            }
+            
+            .flex-item-4 {
+            text-wrap: nowrap;
+            padding: 5em 2em;
+            background-color: lightgoldenrodyellow;
+            }
+            
+            .flex-item-5 {
+            text-wrap: nowrap;
+            padding: 3em 1em;
+            background-color: lightslategray;
+            }
+            
+            .flex-item-6 {
+            text-wrap: nowrap;
+            padding: 6em 3em;
+            background-color: lightyellow;
+            }</code></pre>
+            <p>
+                Estas reglas se usarán en la mayoría de ejeplos, y se muestran aquí primero para no
+                repetirlas en todos los estilos. Se añadirán reglas en cada ejemplo.
+            </p>
+        </section>
+        <section>
+            <h2>Elementos flex</h2>
+            <p><img src="01-flexbox-diagrama-css.jpg" alt="Diagrama de los elementos flex (flexbox)"></p>
+            <h3>Flex items</h3>
+            <p>Los elementos que queremos distribuir / organizar usando flex.</p>
+            <h3>Contenedor flex</h3>
+            <p>Es el elemento "exterior", el contenedor que rodea los elementos flex.</p>
+            <p>En el elemento flex se debe usar una regla CSS con "display: flex" o "display: inline-flex".</p>
+
+            <h3>Ejes</h3>
+            <p>
+                En flex hay dos ejes, principal y transversal:
+            </p>
+            <ul>
+                <li>Eje principal. Linea imaginaria sobre la que se colocarán los elementos flex, uno detrás de otro.
+                </li>
+                <li>Eje transversal. El eje perpendicular al eje principal.</li>
+            </ul>
+            <p>El tamaño del contenedor flex determina la longitud de los ejes.</p>
+            <p>Se puede definir la dirección (horizontal / vertical) y el sentido (del principio al fin / del fin al
+                principio) de los ejes. </p>
+        </section>
+
+        <section>
+            <h2>Direcciones y sentidos de ejes - flex-direction</h2>
+            <h3>Comportamiento por defecto en página LTR (left-to-right)</h3>
+            <div class="flex-container">
+                <div class="flex-item-1">DIV flex-item (1)</div>
+                <div class="flex-item-2">DIV flex-item (2)</div>
+                <div class="flex-item-3">DIV flex-item (3)</div>
+                <div class="flex-item-4">DIV flex-item (4)</div>
+                <div class="flex-item-5">DIV flex-item (5)</div>
+                <div class="flex-item-6">DIV flex-item (6)</div>
+            </div>
+            <ul>
+                <li>Los flex-items se colocan en sentido "row". Es igual que si se usara "flex-direction: row" en el
+                    flex container.</li>
+                <li>El sentido row en LTR, como es nuestro caso, es de izquierda a derecha.</li>
+                <li>Si se acaba el espacio disponible (página más estrecha, por ejemplo), por defecto los elementos se
+                    "salen" de su contenedor, no se reorganizan de ninguna forma.</li>
+                <li>Los elementos se "estiran" para que todos tengan la misma altura.</li>
+            </ul>
+            <h3>Cambiando el sentido del eje principal</h3>
+            <pre><code class="language-css">.flex-direction-row-reverse {
+            flex-direction: row-reverse;
+            }</code></pre>
+            <div class="flex-container flex-direction-row-reverse">
+                <div class="flex-item-1">DIV flex-item (1)</div>
+                <div class="flex-item-2">DIV flex-item (2)</div>
+                <div class="flex-item-3">DIV flex-item (3)</div>
+                <div class="flex-item-4">DIV flex-item (4)</div>
+                <div class="flex-item-5">DIV flex-item (5)</div>
+                <div class="flex-item-6">DIV flex-item (6)</div>
+            </div>
+            <p>En este caso se comienzan a colocar los elementos desde el final al principio del eje.</p>
+            <h3>Cambiando la dirección del eje principal</h3>
+            <pre><code class="language-css">.flex-direction-column {
+            flex-direction: column;
+            }</code></pre>
+            <div class="flex-container flex-direction-column">
+                <div class="flex-item-1">DIV flex-item (1)</div>
+                <div class="flex-item-2">DIV flex-item (2)</div>
+                <div class="flex-item-3">DIV flex-item (3)</div>
+                <div class="flex-item-4">DIV flex-item (4)</div>
+            </div>
+            <p>El eje principal gira 90 grados. Ahora, en LTR, irá de arriba a abajo. Se han puesto menos elementos para
+                simplificar.</p>
+            <h3>Cambiando la dirección y el sentido del eje principal</h3>
+            <pre><code class="language-css"></code></pre>
+            <div class="flex-container flex-direction-column-reverse">
+                <div class="flex-item-1">DIV flex-item (1)</div>
+                <div class="flex-item-2">DIV flex-item (2)</div>
+                <div class="flex-item-3">DIV flex-item (3)</div>
+                <div class="flex-item-4">DIV flex-item (4)</div>
+            </div>
+            <p>Además de girar 90º, el eje principal se invierte, y se colocan los elementos comenzando por el fin</p>
+
+        </section>
+        <section>
+            <h2>Evitar que se salgan los items del contenedor - flex-wrap</h2>
+            <p>Por defecto los elementos, si no caben en una sola línea del eje principal, se salen del contenedor.</p>
+            <p>Se puede indicar que se hagan saltos cuando no quepan, con flex-wrap</p>
+            <h3>Si no cabe en el eje principal, que salte siguiendo el eje secundario</h3>
+            <pre><code class="language-css">.flex-wrap-wrap { flex-wrap: wrap; }</code></pre>
+            <p>Lo que no cabe en una línea de items se coloca en la siguiente línea, siguiendo el sentido del eje
+                transversal.
+            </p>
+            <div class="flex-container flex-wrap-wrap">
+                <div class="flex-item-1">DIV flex-item (1)</div>
+                <div class="flex-item-2">DIV flex-item (2)</div>
+                <div class="flex-item-3">DIV flex-item (3)</div>
+                <div class="flex-item-4">DIV flex-item (4)</div>
+                <div class="flex-item-5">DIV flex-item (5)</div>
+                <div class="flex-item-6">DIV flex-item (6)</div>
+            </div>
+            <p> Observa que, a diferencia de float, el contenedor se visualiza correctamente, no se "colapsa". </p>
+            <h3>Si no cabe en el eje principal, que salte siguiendo el sentido contrario del eje secundario</h3>
+            <pre><code class="language-css">.flex-wrap-wrap-reverse { flex-wrap: wrap-reverse; }</code></pre>
+            <p>Lo que no cabe en una línea de items se coloca en la siguiente línea, siguiendo el sentido del eje
+                transversal.
+            </p>
+            <div class="flex-container flex-wrap-wrap-reverse">
+                <div class="flex-item-1">DIV flex-item (1)</div>
+                <div class="flex-item-2">DIV flex-item (2)</div>
+                <div class="flex-item-3">DIV flex-item (3)</div>
+                <div class="flex-item-4">DIV flex-item (4)</div>
+                <div class="flex-item-5">DIV flex-item (5)</div>
+                <div class="flex-item-6">DIV flex-item (6)</div>
+            </div>
+            <p>Por así decirlo, los items se "apilan".</p>
+        </section>
+        <section>
+            <h2>Distribuir o justificar los elementos a lo largo del eje principal - justify-content</h2>
+            <p>Por defecto, los elementos se colocan desde el principio del eje principa, "apilandose" uno tras otro,
+                hacia el final del eje.</p>
+            <p>Si no caben, se puede decir que salten (flex-wrap), y la siguiente "fila" se comienza a distribuir igual.
+            </p>
+            <p>Este comportamiento por defecto es igual que usar justify-content: start</p>
+            <p>En todos los ejemplos de sitribución se usará flex-wrap: wrap, para que se visualice mejor el efecto al
+                cambiar el tamaño (ancho) de la ventana.</p>
+            <h3>Justificado al inicio del contenedor</h3>
+            <pre><code class="language-css">.flex-justify-start {
+            justify-content: start;
+            }</code></pre>
+            <div class="flex-container flex-wrap-wrap flex-justify-start">
+                <div class="flex-item-1">DIV flex-item (1)</div>
+                <div class="flex-item-2">DIV flex-item (2)</div>
+                <div class="flex-item-3">DIV flex-item (3)</div>
+                <div class="flex-item-4">DIV flex-item (4)</div>
+                <div class="flex-item-5">DIV flex-item (5)</div>
+                <div class="flex-item-6">DIV flex-item (6)</div>
+            </div>
+            <p>Es el comportamiento por defecto</p>
+            <h3>Justificado al final del contenedor</h3>
+            <pre><code class="language-css">.flex-justify-end {
+            justify-content: end;
+            }</code></pre>
+            <div class="flex-container flex-wrap-wrap flex-justify-end">
+                <div class="flex-item-1">DIV flex-item (1)</div>
+                <div class="flex-item-2">DIV flex-item (2)</div>
+                <div class="flex-item-3">DIV flex-item (3)</div>
+                <div class="flex-item-4">DIV flex-item (4)</div>
+                <div class="flex-item-5">DIV flex-item (5)</div>
+                <div class="flex-item-6">DIV flex-item (6)</div>
+            </div>
+            <p>Se alinean los elementos al final del contenedor. No confundirlo con direction. Se alinea, pero
+                mantienen el orden/sentido establecido.</p>
+            <h3>Centrado en el contenedor</h3>
+            <pre><code class="language-css">.flex-justify-center {
+            justify-content: center;
+            }</code></pre>
+            <div class="flex-container flex-wrap-wrap flex-justify-center">
+                <div class="flex-item-1">DIV flex-item (1)</div>
+                <div class="flex-item-2">DIV flex-item (2)</div>
+                <div class="flex-item-3">DIV flex-item (3)</div>
+                <div class="flex-item-4">DIV flex-item (4)</div>
+                <div class="flex-item-5">DIV flex-item (5)</div>
+                <div class="flex-item-6">DIV flex-item (6)</div>
+            </div>
+            <p>Los elementos se centran en el contenedor</p>
+            <h3>Repartidos uniformemente en el contedor - space-between</h3>
+            <pre><code class="language-css">.flex-justify-space-between {
+            justify-content: space-between;
+            }</code></pre>
+            <div class="flex-container flex-wrap-wrap flex-justify-between">
+                <div class="flex-item-1">DIV flex-item (1)</div>
+                <div class="flex-item-2">DIV flex-item (2)</div>
+                <div class="flex-item-3">DIV flex-item (3)</div>
+                <div class="flex-item-4">DIV flex-item (4)</div>
+                <div class="flex-item-5">DIV flex-item (5)</div>
+                <div class="flex-item-6">DIV flex-item (6)</div>
+            </div>
+            <p>En este ejemplo (space-between), los elementos primero y último de cada fila se pegan a los extemos, y el
+                exceso de espacio se reparte entre los elementos. </p>
+
+            <h3>Repartidos uniformemente en el contedor - space-around</h3>
+            <pre><code class="language-css">.flex-justify-around {
+                        justify-content: space-around;
+                        }</code></pre>
+
+            <div class="flex-container flex-wrap-wrap flex-justify-around">
+                <div class="flex-item-1">DIV flex-item (1)</div>
+                <div class="flex-item-2">DIV flex-item (2)</div>
+                <div class="flex-item-3">DIV flex-item (3)</div>
+                <div class="flex-item-4">DIV flex-item (4)</div>
+                <div class="flex-item-5">DIV flex-item (5)</div>
+                <div class="flex-item-6">DIV flex-item (6)</div>
+            </div>
+            <p>En este otro ejemplo elementos primero y último de cada fila ya no se pegan a los
+                extemos. El espacio restante se distribuye para separar los items. Los espacios de los extremos son más
+                pequeños (más o menos la mitad) que los espaciones entre otros elementos.</p>
+
+            <h3>Repartidos uniformemente en el contedor - space-evenly</h3>
+            <pre><code class="language-css">.flex-justify-evenly {
+                        justify-content: space-evenly;
+                        }</code></pre>
+
+            <div class="flex-container flex-wrap-wrap flex-justify-evenly">
+                <div class="flex-item-1">DIV flex-item (1)</div>
+                <div class="flex-item-2">DIV flex-item (2)</div>
+                <div class="flex-item-3">DIV flex-item (3)</div>
+                <div class="flex-item-4">DIV flex-item (4)</div>
+                <div class="flex-item-5">DIV flex-item (5)</div>
+                <div class="flex-item-6">DIV flex-item (6)</div>
+            </div>
+            <p>Prácticamente igual que space-around, pero el espacio a los lados es el mismo que el espacio entre otros
+                dos elementos.</p>
+
+        </section>
+        <!--
+        <section>
+            <h2>Flotado de imágenes</h2>
+            <p>En estos ejemplos las imágenes se generan dinámicamente con "https://dummyimage.com". Es un sitio web
+                para generar imágenes de tamaños específicos, y colores específicos.</p>
+            <p>Basta con usar en el atributo src la dirección
+                "https://dummyimage.com/anchoxalto/color-fondo/color-texto". Ejemplo:
+                "https://dummyimage.com/1280x720/fff/aaa". </p>
+            <h3>Flotado de imagen a la izquierda, dentro de un párrafo de texto</h3>
+            <pre><code class="language-css">.img-left {
+            float: left;
+            padding: 0 1em 1em 0;
+            }</code></pre>
+            <div>
+                <p>
+                    Este es un ejemplo de una imagen flotada a la izquierda. El texto fluye alrededor de la imagen,
+                    ocupando el espacio restante a la izquierda.
+                </p>
+                <p>
+                    <img src="https://dummyimage.com/150x150/ccc/000" alt="Imagen flotada en párrafo" class="img-left">
+                    Este sería el párrafo en el que se coloca la imagen, y el texto fluye arrededor de la imagen.
+                </p>
+                <p>
+                    Este párrafo, distinto al anterior, también fluye, proque no ha habido un elemento que deshaga el
+                    flotado, un "clear:both".
+                </p>
+                <p class="clear-both">Este párrafo ya no flota, proque tiene una clase con "clear".</p>
+                <p>
+                    Se recomienda usar márgenes en la imagen para que el texto no quede pegado a la imagen. Esto mejora
+                    la legibilidad y la estética general del diseño.
+                </p>
+            </div>
+
+            <h3>Flotado de imagen a la derecha, dentro de un párrafo de texto</h3>
+            <pre><code class="language-css">.img-right {
+            float: right;
+            padding: 0 0 1em 1em;
+            }</code></pre>
+            <div>
+                <p>
+                    Este es un ejemplo de una imagen flotada a la derecha. El texto fluye alrededor de la imagen,
+                    ocupando el espacio restante a la izquierda.
+                </p>
+                <p>
+                    <img src="https://dummyimage.com/150x150/ccc/000" alt="Imagen flotada en párrafo" class="img-right">
+                    Este sería el párrafo en el que se coloca la imagen, y el texto fluye arrededor de la imagen.
+                </p>
+                <p>
+                    Este párrafo, distinto al anterior, también fluye, porque no ha habido un elemento que deshaga el
+                    flotado, un "clear:both".
+                </p>
+                <p class="clear-both">Este párrafo ya no flota, porque tiene una clase con "clear".</p>
+            </div>
+
+            <h3>Flotado alrededor de una imagen circular</h3>
+            <pre><code class="language-css">.img-circle {
+            float: left;
+            width: 200px;
+            height: 200px;
+            margin: 10px 15px 10px 0;
+            border-radius: 50%;
+            clip-path: circle(50%);
+            shape-outside: circle(50%);
+            }</code></pre>
+            <div>
+                <p><img src="https://dummyimage.com/200x200/ccc/000" alt="Imagen circular" class="img-circle">
+                    La imagen en realidad es cuadrada, pero se le da forma circular con "clip-path", y se indica que se
+                    rodee de texto con "shape-outside".</p>
+
+                <p>Este segundo párrafo sigue flotando siguiendo el "camino" circular. El siguiente párrafo es un lorem
+                    ipsum para que se vea mejor el efecto.</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum accusantium fugiat corporis vero
+                    voluptatem modi quaerat reprehenderit illo, velit, quas consequatur illum sapiente, neque doloribus
+                    minus laudantium odio labore facere? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut
+                    dolor a totam quasi, aliquid, cum laudantium qui velit laboriosam, sapiente praesentium
+                    consequuntur. Laboriosam quibusdam unde atque quo iste. Distinctio, quibusdam! Lorem, ipsum dolor
+                    sit amet consectetur adipisicing elit. Iusto odio, aliquid quo a, incidunt tempora laboriosam minus
+                    tenetur quibusdam nam commodi quisquam natus eius architecto saepe? Rerum tempora magni consequatur?
+                </p>
+
+                <p>Se pueden definir muchas formas para clip-path y shape-outside. Tenéis más información en la MDN.</p>
+            </div>
+        </section>
+    -->
+    </main>
+    <footer>
+        <p>Lenguajes de marcas y sistemas de gestión de la información - IES Clara del Rey</p>
+    </footer>
+    <script>;
+        hljs.highlightAll();
+    </script>
+
+</body>
+
+</html>
