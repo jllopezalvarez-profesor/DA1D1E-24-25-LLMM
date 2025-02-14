@@ -1,0 +1,24 @@
+[
+    {
+        "id": "P1001",
+        "fecha": "2025-02-14",
+        "cliente": {
+            "id-cliente": "C1001",
+            "nombre": "Cliente 1",
+            "email": "elcorreo@delcliente.com"
+        },
+        "direccion-envio": {
+            "calle-numero": "Padre Claret 8",
+            "ciudad": "Madrid",
+            "cp": "28002"
+        },
+        "productos": [
+            {
+                "id": "P001",
+                "cantidad": 2,
+                "precio": 20.5,
+                "nombre-producto": "Papel higiénico"
+            }
+        ]
+    }
+]

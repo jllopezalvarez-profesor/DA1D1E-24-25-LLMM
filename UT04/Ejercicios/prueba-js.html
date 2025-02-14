@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const arrayObjetos = JSON.parse(`
+        [
+    {
+        "id": "P1001",
+        "fecha": "2025-02-14",
+        "cliente": {
+            "id-cliente": "C1001",
+            "nombre": "Cliente 1",
+            "email": "elcorreo@delcliente.com"
+        },
+        "direccion-envio": {
+            "calle-numero": "Padre Claret 8",
+            "ciudad": "Madrid",
+            "cp": "28002"
+        },
+        "productos": [
+            {
+                "id": "P001",
+                "cantidad": 2,
+                "precio": 20.5,
+                "nombre-producto": "Papel higiénico"
+            }
+        ]
+    }
+]
+        
+        
+        `)
+
+        console.log('El array completo', arrayObjetos)
+
+        console.log('El primer objeto', arrayObjetos[0])
+        console.log('El id del primer cliente', arrayObjetos[0].cliente["id-cliente"])
+
+
+    </script>
+</head>
+
+<body>
+    <button type="button" id="btn">Procesar JSON</button>
+
+</body>
+
+</html>

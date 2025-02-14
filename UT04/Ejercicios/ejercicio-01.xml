@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contactos>
+    <contacto id="1">
+        <nombre></nombre>
+        <apellidos></apellidos>
+        <direccion>
+            <tipo-via></tipo-via>
+            <nombreVia></nombreVia>
+            <numero></numero>
+            <info-adicional></info-adicional>
+            <cp></cp>
+            <poblacion></poblacion>
+        </direccion>
+        <telefonos>
+            <fijo>
+            </fijo>
+            <movil></movil>
+            <trabajo />
+        </telefonos>
+
+    </contacto>
+
+    <contacto id="2">
+        <nombre></nombre>
+        <apellidos></apellidos>
+        <direccion>
+            <tipo-via></tipo-via>
+            <nombreVia></nombreVia>
+            <numero></numero>
+            <info-adicional></info-adicional>
+            <cp></cp>
+            <poblacion></poblacion>
+        </direccion>
+        <telefonos>
+            <fijo>
+            </fijo>
+            <movil></movil>
+            <trabajo />
+        </telefonos>
+
+    </contacto>
+</contactos>

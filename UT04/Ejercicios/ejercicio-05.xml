@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pedidos>
+    <pedido id="P1001" fecha="2025-02-14">
+        <cliente id-cliente="C1001">
+            <nombre>Cliente 1</nombre>
+            <email>elcorreo@delcliente.com</email>
+        </cliente>
+        <direccion-envio>
+            <calle-numero>Padre Claret, 8</calle-numero>
+            <ciudad>Madrid</ciudad>
+            <cp>28002</cp>
+        </direccion-envio>
+        <productos>
+            <producto id="P001" cantidad="2" precio="20.5">
+                <nombre-producto>Papel higiénico</nombre-producto>
+            </producto>
+            <producto id="P002" cantidad="2" precio="20.5">
+                <nombre-producto>Servilletas de papel</nombre-producto>
+            </producto>
+        </productos>
+        <total-pedido>500</total-pedido>
+    </pedido>
+</pedidos>

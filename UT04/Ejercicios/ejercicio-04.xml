@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mensaje>
+    <remitente email="jllopezalvarez@educa.madrid.org">José Luis López Álvarez</remitente>
+    <destinatiario email="jllopezalvarez@educa.madrid.org">José Luis López Álvarez</destinatiario>
+
+    <!-- Opción alternativa para remitente / destinatario-->
+    <!-- 
+    <remitente>
+        <nombre>
+        </nombre>
+        <email></email>
+    </remitente> 
+    -->
+
+    <asunto>Esto es un correo</asunto>
+    <texto>
+        <parrafo>Párrafo 1</parrafo>
+        <parrafo>Párrafo 2</parrafo>
+        <parrafo>Párrafo 3</parrafo>
+        <parrafo>Párrafo 4</parrafo>
+        <parrafo>Párrafo 5</parrafo>
+    </texto>
+</mensaje>

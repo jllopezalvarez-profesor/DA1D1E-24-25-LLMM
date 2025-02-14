@@ -1,0 +1,26 @@
+{
+    "remitente": {
+        "nombre": "José Luis",
+        "email": "jllopezalvarez@educa.madrid.org"
+    },
+    "destinatario": {
+        "nombre": "José Luis",
+        "email": "jllopezalvarez@educa.madrid.org"
+    },
+    "asunto": "Esto es un mensaje",
+    "texto": [
+        "Párrafo 1",
+        "Párrafo 2",
+        "Párrafo 3",
+        "Párrafo 4",
+        "Párrafo 5",
+        "Párrafo 6",
+        "Párrafo 6",
+        "Párrafo 6",
+        "Párrafo 6",
+        "Párrafo 6",
+        "Párrafo 6",
+        "Párrafo 6",
+        "Párrafo 6"
+    ]
+}

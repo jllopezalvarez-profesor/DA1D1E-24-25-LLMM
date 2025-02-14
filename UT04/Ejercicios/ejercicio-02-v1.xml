@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recetas>
+    <receta comensales="4">
+        <nombre>Sopa de cebolla</nombre>
+        <ingrediente orden="1" cantidad="1 Kg.">Cebollas</ingrediente>
+        <ingrediente
+            orden="2" cantidad="2 l.">caldo de carne</ingrediente>
+        <ingrediente orden="3"
+            cantidad="100 gr.">mantequilla</ingrediente>
+        <ingrediente orden="4"
+            cantidad="1 cucharada">harina</ingrediente>
+        <paso orden="1">Pelar y partir las cebollas
+            en rodajas finas.</paso>
+        <paso orden="2">Rehogarlas con la mantequilla, sal y pimienta a
+        fuego lento hasta que
+            estén transparentes sin
+            dorarse.</paso>
+        <paso orden="3">Añadir la harina sin dejar de remover.</paso>
+        <paso
+            orden="4">Ponerlo en una cazuela con el caldo, el tomillo y el laurel.</paso>
+        <paso
+            orden="5">
+            Dejar cocer a fuego lento durante unos 15 minutos.</paso>
+        <!-- Este texto dentro de "receta" pero fuera de nodos constituye contenido mixto --> Aquí tengo la introducción a
+        la receta </receta>
+</recetas>
