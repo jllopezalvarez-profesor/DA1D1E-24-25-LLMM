@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE persona [
+    <!ELEMENT persona (nombre, mayorDeEdad, ciudad)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT mayorDeEdad EMPTY>
+    <!ELEMENT ciudad (#PCDATA)>
+]>
+<persona>
+    <nombre>Juan Pérez</nombre>
+    <mayorDeEdad />
+    <ciudad>Madrid</ciudad>
+</persona>
