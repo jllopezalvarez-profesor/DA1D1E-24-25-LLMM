@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE musicos [
+    <!ELEMENT musicos (musico*)>
+    <!ELEMENT musico (nombre, apodo?, fechaNacimiento)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apodo (#PCDATA)>
+    <!ELEMENT fechaNacimiento (#PCDATA)>
+]>
 <!-- Dado el siguiente documento XML, añade el DTD necesario para que valide. -->
 <musicos>
     <musico>

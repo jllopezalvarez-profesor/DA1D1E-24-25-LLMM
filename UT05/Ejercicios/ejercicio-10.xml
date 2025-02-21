@@ -1,4 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE jornada [
+    <!ELEMENT jornada (equipos, partidos)>
+    <!ELEMENT equipos (equipo+)>
+    <!ELEMENT partidos (partido+)>
+    <!ELEMENT equipo (nombre, entrenador, localidad, puesto, 
+    partidosJugados, partidosPerdidos, partidosEmpatados, golaveraje)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT entrenador (#PCDATA)>
+    <!ELEMENT localidad (#PCDATA)>
+    <!ELEMENT puesto (#PCDATA)>
+    <!ELEMENT partidosJugados (#PCDATA)>
+    <!ELEMENT partidosPerdidos (#PCDATA)>
+    <!ELEMENT partidosEmpatados (#PCDATA)>
+    <!ELEMENT golaveraje (golesAFavor, golesEnContra)>
+    <!ELEMENT golesAFavor (#PCDATA)>
+    <!ELEMENT golesEnContra (#PCDATA)>
+    <!ELEMENT partido (local, visitante, golesLocal, golesVisitante)>
+    <!ELEMENT local (#PCDATA)>
+    <!ELEMENT visitante (#PCDATA)>
+    <!ELEMENT golesLocal (#PCDATA)>
+    <!ELEMENT golesVisitante (#PCDATA)>
+]>
+
+<jornada>
+    <equipos>
+        <equipo>
+            <nombre></nombre>
+            <entrenador></entrenador>
+            <localidad></localidad>
+            <puesto></puesto>
+            <partidosJugados></partidosJugados>
+            <partidosPerdidos></partidosPerdidos>
+            <partidosEmpatados></partidosEmpatados>
+            <golaveraje>
+                <golesAFavor></golesAFavor>
+                <golesEnContra></golesEnContra>
+            </golaveraje>
+        </equipo>
+    </equipos>
+    <partidos>
+        <partido>
+            <local></local>
+            <visitante></visitante>
+            <golesVisitante></golesVisitante>
+
+        </partido>
+    </partidos>
+</jornada>
+
 <!-- 
 Se quiere definir un lenguaje de marcas para representar los resultados de una jornada de una liga
 de fútbol. La información que se quiere almacenar de cada partido es:
@@ -26,4 +75,3 @@ liga. Por cada equipo:
         ◦ Goles en contra
 
 -->
-<root> </root>

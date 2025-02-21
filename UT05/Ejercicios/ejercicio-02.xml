@@ -7,6 +7,6 @@
 <!--Dado
 el siguiente XML, modifícalo para que sea válido, SIN MODIFICAR la DTD-->
 <perro>
-    <nombre>Pancho</nombre>
     <edad>8</edad>
+    <nombre>Pancho</nombre>
 </perro>

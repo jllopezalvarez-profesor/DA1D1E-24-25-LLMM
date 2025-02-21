@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sistemaSolar [
+    <!ELEMENT sistemaSolar (cuerpo*, asteroide*)>
+    <!ELEMENT cuerpo (planeta, satelite*)>
+    <!ELEMENT planeta (#PCDATA)>
+    <!ELEMENT satelite (#PCDATA)>
+    <!ELEMENT asteroide (#PCDATA)>
+]>
 <!--
 Dado el siguiente documento XML, añade el DTD necesario para que valide. Ten en cuenta que en el
 sistema solar hay múltiples cuerpos y asteroides.
@@ -8,5 +15,5 @@ sistema solar hay múltiples cuerpos y asteroides.
         <planeta>Tierra</planeta>
         <satelite>Luna</satelite>
     </cuerpo>
-    <asteroide>Ceres</asteroide>
+    <asteroide>Ceres ahfkhsd afkjahdkfhaksdfha hkashdf k</asteroide>
 </sistemaSolar>

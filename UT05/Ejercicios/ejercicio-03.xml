@@ -9,4 +9,5 @@
 <caballo>
     <nombre>Silvestre</nombre>
     <raza>Morgan</raza>
+    <edad />
 </caballo>
