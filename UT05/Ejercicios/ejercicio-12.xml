@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE empresas [
+    <!ELEMENT empresas (empresa)*>
+    <!ELEMENT empresa EMPTY>
+    <!ATTLIST empresa nombre CDATA #REQUIRED>
+    <!ATTLIST empresa fecha_de_fundacion CDATA #IMPLIED>
+]>
+<!-- Dado el siguiente XML, modifícalo para que sea válido, SIN MODIFICAR la DTD -->
+<empresas>
+    <empresa fecha_de_fundacion="1976">Apple</empresa>
+    <empresa>Google</empresa>
+    <empresa fecha_de_fundacion="1975">Microsoft</empresa>
+</empresas>

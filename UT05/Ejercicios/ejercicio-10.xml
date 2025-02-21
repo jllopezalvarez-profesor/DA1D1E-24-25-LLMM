@@ -42,8 +42,8 @@
         <partido>
             <local></local>
             <visitante></visitante>
+            <golesLocal></golesLocal>
             <golesVisitante></golesVisitante>
-
         </partido>
     </partidos>
 </jornada>

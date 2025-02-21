@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Dado el siguiente documento XML, añade el DTD necesario para que valide. -->
+<root>
+    <records>
+        <record>
+            <title>Brand New Eyes</title>
+            <artist>Paramore</artist>
+            <genre>Punk Rock</genre>
+            <year>2011</year>
+        </record>
+        <record>
+            <artist>Various Artist</artist>
+            <genre>Rock</genre>
+            <year />
+        </record>
+    </records>
+</root>

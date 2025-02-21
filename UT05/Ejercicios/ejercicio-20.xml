@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Toma el resultado del ejercicio 10, en el que se
+creaba el XML para la liga de fútbol, y modifícalo para que se use atributos para algunos de los
+datos que estamos guardando:  
+•	para los goles marcados en los partidos
+•	para la posición del equipo en la liga.
+Además, añade atributos en donde corresponda para que podamos tener información del aforo del
+estadio de los equipos. Este dato es opcional, no es obligatorio, y tenemos que guardarlo en los
+equipos como atributo.
+-->
+<root></root>

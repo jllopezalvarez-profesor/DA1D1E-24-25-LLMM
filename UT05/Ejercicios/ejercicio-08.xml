@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE agenda [
+    <!ELEMENT agenda (contacto*)>
+    <!ELEMENT contacto (nombre, (telefonoFijo, telefonoMovil?)+)>
+    <!-- <!ELEMENT contacto (nombre, telefonoFijo, telefonoMovil?, telefonoFijo?)> -->
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT telefonoFijo (#PCDATA)>
+    <!ELEMENT telefonoMovil (#PCDATA)>
+]>
 <!-- 
 Dado el siguiente documento XML, añade el DTD necesario para que valide, teniendo en cuenta que
 tendremos varios contactos en la agenda, pero que también puede estar vacía.
