@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Dado el siguiente documento XML, añade el DTD necesario para que valide. Ten en cuenta que al menos
+tendremos un país, y que todos los elementos del país son obligatorios. 
+-->
+<geografiaMundial>
+    <pais>
+        <pais>España</pais>
+        <continente>Europa</continente>
+        <capital>Madrid</capital>
+    </pais>
+</geografiaMundial>

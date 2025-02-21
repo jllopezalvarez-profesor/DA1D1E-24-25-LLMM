@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Se quiere definir un lenguaje de marcas para representar los resultados de una jornada de una liga
+de fútbol. La información que se quiere almacenar de cada partido es:
+    • Nombre del equipo local.
+    • Nombre del equipo visitante.
+    • Goles marcados por el equipo local.
+    • Goles marcados por el equipo visitante
+    • Los resultados de los partidos son los siguientes:
+        ◦ Alpedrete: 0 - Madracos: 1
+        ◦ Guadarrama: 3 - Villalba: 3
+        ◦ CD El Escorial: 4 – Torrelodones: 2
+
+Además, el XML tendrá, además de los resultados, la información de los equipos participantes en la
+liga. Por cada equipo:
+    • Nombre del equipo
+    • Nombre del entrenador
+    • Localidad
+    • Posición en la liga
+    • Partidos (número de partidos)
+        ◦ Partidos jugados 
+        ◦ Partidos perdidos
+        ◦ Partidos empatados
+    • Golaveraje (número de goles)
+        ◦ Goles a favor
+        ◦ Goles en contra
+
+-->
+<root> </root>

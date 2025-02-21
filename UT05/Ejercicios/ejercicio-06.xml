@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Dado el siguiente documento XML, añade el DTD necesario para que valide. -->
+<musicos>
+    <musico>
+        <nombre>Antonio Vivaldi</nombre>
+        <apodo>El cura pelirrojillo</apodo>
+        <fechaNacimiento>4 de marzo de 1678</fechaNacimiento>
+    </musico>
+    <musico>
+        <nombre>Johann Sebastian Bach</nombre>
+        <fechaNacimiento>21 de marzo de 1685</fechaNacimiento>
+    </musico>
+</musicos>

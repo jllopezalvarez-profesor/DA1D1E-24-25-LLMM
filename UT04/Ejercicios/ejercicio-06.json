@@ -1,0 +1,41 @@
+[
+    {
+        "id": "E2025-001",
+        "gratuito": true,
+        "nombre": "Festival de jazz",
+        "tipo": "Cultural",
+        "ubicacion": {
+            "lat": "40°26'45\"n",
+            "long": "3°40'39\"o",
+            "lugar": "Auditorio nacional de música",
+            "direccion": "Príncipe de Vergara 146"
+        },
+        "horario": {
+            "fechainicio": "2025-06-10",
+            "horainicio": "20:30",
+            "fechafin": "2025-06-20"
+        },
+        "organizadores": [
+            {
+                "nombre": "Ana López",
+                "contacto": "ana@email.com",
+                "rol": "Coordinador"
+            },
+            {
+                "nombre": "Fundación Música Viva",
+                "contacto": "info@musicaviva.org",
+                "rol": "Patrocinador"
+            }
+        ],
+        "asistentes": [
+            {
+                "nombre": "Carlos Ramírez",
+                "profesion": "Músico"
+            },
+            {
+                "nombre": "Laura Martínez",
+                "profesion": "Periodista"
+            }
+        ]
+    }
+]

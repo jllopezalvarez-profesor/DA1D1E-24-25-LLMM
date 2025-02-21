@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- 
+Dado el siguiente documento XML, añade el DTD necesario para que valide. Teniendo en cuenta que
+podemos tener más de una raza de perro y más de una de gato. O ninguna de perro o ninguna de gato. 
+-->
+<animales>
+    <perro>Caniche</perro>
+    <gato>Siamés</gato>
+</animales>

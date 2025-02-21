@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE perro [
+    <!ELEMENT perro (edad, nombre)>
+    <!ELEMENT edad (#PCDATA)>
+    <!ELEMENT nombre (#PCDATA)>
+]>
+<!--Dado
+el siguiente XML, modifícalo para que sea válido, SIN MODIFICAR la DTD-->
+<perro>
+    <nombre>Pancho</nombre>
+    <edad>8</edad>
+</perro>

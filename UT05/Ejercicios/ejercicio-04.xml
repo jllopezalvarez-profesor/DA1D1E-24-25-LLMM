@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE ropa [
+    <!ELEMENT ropa (nombre, color*)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT color (#PCDATA)>
+]>
+<!-- Dado el siguiente XML, modifícalo para que sea válido, SIN MODIFICAR la DTD -->
+<ropa>
+    <nombre>guante</nombre>
+    <color>rojo</color>
+    <color>blanco</color>
+    <nombre>bufanda</nombre>
+    <color>verde</color>
+    <color>azul</color>
+</ropa>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE caballo [
+    <!ELEMENT caballo (nombre, raza, edad)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT raza (#PCDATA)>
+    <!ELEMENT edad EMPTY>
+]>
+<!-- Dado el siguiente XML, modifícalo para que sea válido, SIN MODIFICAR la DTD -->
+<caballo>
+    <nombre>Silvestre</nombre>
+    <raza>Morgan</raza>
+</caballo>

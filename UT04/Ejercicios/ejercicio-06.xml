@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventos>
+    <evento id="E2025-001" gratuito="true">
+        <nombre>Festival de jazz</nombre>
+        <tipo>Cultural</tipo>
+        <ubicacion lat="40°26'45&quot;n" long="3°40'39&quot;o">
+            <lugar>Auditorio nacional de música</lugar>
+            <direccion>Príncipe de Vergara 146</direccion>
+        </ubicacion>
+        <horario>
+            <fechainicio>2025-06-10</fechainicio>
+            <horainicio>20:30</horainicio>
+            <fechafin>2025-06-20</fechafin>
+        </horario>
+        <organizadores>
+            <organizador>
+                <nombre>Ana López</nombre>
+                <contacto>ana@email.com</contacto>
+                <rol>Coordinador</rol>
+            </organizador>
+            <organizador>
+                <nombre>Fundación Música Viva</nombre>
+                <contacto>info@musicaviva.org</contacto>
+                <rol>Patrocinador</rol>
+            </organizador>
+        </organizadores>
+        <asistentes>
+            <asistente>
+                <nombre>Carlos Ramírez</nombre>
+                <profesion>Músico</profesion>
+            </asistente>
+            <asistente>
+                <nombre>Laura Martínez</nombre>
+                <profesion>Periodista</profesion>
+            </asistente>
+        </asistentes>
+    </evento>
+</eventos>
