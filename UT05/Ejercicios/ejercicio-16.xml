@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE cine [
+    <!ELEMENT cine (peliculas, actores)>
     <!ELEMENT peliculas (pelicula)*>
     <!ELEMENT pelicula (#PCDATA)>
     <!ATTLIST pelicula codpel ID (P1 | P2 | P3 | P4) "P0">
     <!ELEMENT actores (actor)*>
     <!ELEMENT actor (#PCDATA)>
-    <!ATTLIST actor filmografia IDREF #REQUIRED>
+    <!ATTLIST actor filmografia IDREFS #REQUIRED>
 ]>
 <!-- Dado el siguiente XML, modifícalo para que sea válido, SIN MODIFICAR la DTD -->
 <cine>
