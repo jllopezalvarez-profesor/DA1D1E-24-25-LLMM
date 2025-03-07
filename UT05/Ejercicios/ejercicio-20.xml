@@ -8,4 +8,49 @@ Además, añade atributos en donde corresponda para que podamos tener informaci�
 estadio de los equipos. Este dato es opcional, no es obligatorio, y tenemos que guardarlo en los
 equipos como atributo.
 -->
-<root></root>
+<!DOCTYPE jornada [
+    <!ELEMENT jornada (equipos, partidos)>
+    <!ELEMENT equipos (equipo+)>
+    <!ELEMENT partidos (partido+)>
+    <!ELEMENT equipo (nombre, entrenador, localidad,  
+    partidosJugados, partidosPerdidos, partidosEmpatados, golaveraje)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT entrenador (#PCDATA)>
+    <!ELEMENT localidad (#PCDATA)>
+    <!ELEMENT partidosJugados (#PCDATA)>
+    <!ELEMENT partidosPerdidos (#PCDATA)>
+    <!ELEMENT partidosEmpatados (#PCDATA)>
+    <!ELEMENT golaveraje (golesAFavor, golesEnContra)>
+    <!ELEMENT golesAFavor (#PCDATA)>
+    <!ELEMENT golesEnContra (#PCDATA)>
+    <!ATTLIST equipo puesto CDATA #REQUIRED>
+    <!ATTLIST equipo aforo-estadio CDATA #IMPLIED>
+    <!ELEMENT partido (local, visitante)>
+    <!ELEMENT local (#PCDATA)>
+    <!ELEMENT visitante (#PCDATA)>
+    <!ATTLIST partido
+        golesLocal CDATA #REQUIRED
+        golesVisitante CDATA #REQUIRED>
+]>
+<jornada>
+    <equipos>
+        <equipo puesto="4" aforo-estadio="10">
+            <nombre></nombre>
+            <entrenador></entrenador>
+            <localidad></localidad>
+            <partidosJugados></partidosJugados>
+            <partidosPerdidos></partidosPerdidos>
+            <partidosEmpatados></partidosEmpatados>
+            <golaveraje>
+                <golesAFavor></golesAFavor>
+                <golesEnContra></golesEnContra>
+            </golaveraje>
+        </equipo>
+    </equipos>
+    <partidos>
+        <partido golesLocal="3" golesVisitante="4">
+            <local></local>
+            <visitante></visitante>
+        </partido>
+    </partidos>
+</jornada>

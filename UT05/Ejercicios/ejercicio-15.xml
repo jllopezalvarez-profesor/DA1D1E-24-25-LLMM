@@ -10,7 +10,9 @@
 <!-- Dado el siguiente XML, modifícalo para que sea válido, SIN MODIFICAR la DTD. -->
 <declaraciones>
     <consonante valor="3.141592">PI</consonante>
+    <!--
     <variable tipo="real">radio</variable>
     <variable>area</variable>
     <variable>longitud</variable>
+    -->
 </declaraciones>

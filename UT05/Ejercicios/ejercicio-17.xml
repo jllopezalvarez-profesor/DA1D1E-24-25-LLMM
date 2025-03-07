@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Dado el siguiente documento XML, añade el DTD necesario para que valide.  -->
+<!DOCTYPE tareasPorHacer [
+    <!ELEMENT tareasPorHacer (tarea*)>
+    <!ELEMENT tarea (#PCDATA)>
+    <!ATTLIST tarea fecha CDATA #REQUIRED>
+    <!ATTLIST tarea fechaLimite CDATA #REQUIRED>
+]>
 <tareasPorHacer>
-    <tarea fecha="2021-02-01" fechaLimite="2021-03-01">
-        Preparar ejercicios de DTDs</tarea>
-    <tarea fecha="2021-02-21" fechaLimite="2021-03-15">
-        Preparar tema XSLT</tarea>
+    <tarea fecha="2021-02-01" fechaLimite="2021-03-01"> Preparar ejercicios de DTDs</tarea>
+    <tarea fecha="2021-02-21" fechaLimite="2021-03-15"> Preparar tema XSLT</tarea>
 </tareasPorHacer>

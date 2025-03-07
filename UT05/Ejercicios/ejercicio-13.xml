@@ -11,16 +11,16 @@
 <!-- Dado el siguiente XML, modifícalo para que sea válido, SIN MODIFICAR la DTD -->
 <geografia>
     <paises>
-        <pais codpais="1">Argentina</pais>
-        <pais codpais="2">Austria</pais>
-        <pais codpais="3">Japón</pais>
-        <pais codpais="4">Noruega</pais>
+        <pais codpais="P1">Argentina</pais>
+        <pais codpais="P2">Austria</pais>
+        <pais codpais="P3">Japón</pais>
+        <pais codpais="P4">Noruega</pais>
     </paises>
     <ciudades>
-        <ciudad pais="3">Osaka</ciudad>
+        <ciudad pais="P3">Osaka</ciudad>
         <ciudad>Oslo</ciudad>
-        <ciudad pais="">Sevilla</ciudad>
-        <ciudad pais="3">Tokio</ciudad>
-        <ciudad pais="2">Viena</ciudad>
+        <ciudad>Sevilla</ciudad>
+        <ciudad pais="P3">Tokio</ciudad>
+        <ciudad pais="P2">Viena</ciudad>
     </ciudades>
 </geografia>

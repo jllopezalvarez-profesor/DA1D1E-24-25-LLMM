@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Dado el siguiente documento XML, añade el DTD necesario para que valide. -->
+<!DOCTYPE root [
+    <!ELEMENT root (records)>
+    <!ELEMENT records (record*)>
+    <!ELEMENT record (title?, artist, genre, year)>
+    <!ELEMENT title (#PCDATA)>
+    <!ELEMENT artist (#PCDATA)>
+    <!ELEMENT genre (#PCDATA)>
+    <!ELEMENT year (#PCDATA)>
+]>
 <root>
     <records>
         <record>

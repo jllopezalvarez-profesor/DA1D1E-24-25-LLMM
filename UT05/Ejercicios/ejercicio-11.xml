@@ -12,7 +12,7 @@
 <!-- Dado el siguiente XML, modifícalo para que sea válido, SIN MODIFICAR la DTD -->
 <formas>
     <cuadrado lados="4">tablero</cuadrado>
+    <triangulo lados="3">señal</triangulo>
     <circulo>anilla</circulo>
-    <triangulo>señal</triangulo>
     <otra lados="7" />
 </formas>

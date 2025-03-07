@@ -7,7 +7,7 @@
 ]>
 <!-- Dado el siguiente XML, modifícalo para que sea válido, SIN MODIFICAR la DTD -->
 <empresas>
-    <empresa fecha_de_fundacion="1976">Apple</empresa>
-    <empresa>Google</empresa>
-    <empresa fecha_de_fundacion="1975">Microsoft</empresa>
+    <empresa nombre="Apple" fecha_de_fundacion="1976" />
+    <empresa nombre="Google" />
+    <empresa nombre="Microsoft" fecha_de_fundacion="1975" />
 </empresas>

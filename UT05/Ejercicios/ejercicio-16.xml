@@ -9,6 +9,8 @@
     <!ATTLIST actor filmografia IDREFS #REQUIRED>
 ]>
 <!-- Dado el siguiente XML, modifícalo para que sea válido, SIN MODIFICAR la DTD -->
+<!-- Cuando el atributo es ID no deja que se use la notación OR (|) -->
+<!-- Este ejercicio no se puede resolver sin cambiar el DTD -->
 <cine>
     <peliculas>
         <pelicula>Avatar</pelicula>

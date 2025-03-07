@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!-- Dado el siguiente documento XML, añade el DTD necesario para que valide. -->
+<!DOCTYPE inventores [
+    <!ELEMENT inventores (inventor*)>
+    <!ELEMENT inventor EMPTY>
+    <!ATTLIST inventor
+        nombre CDATA #IMPLIED
+        invento CDATA #REQUIRED>
+]>
 <inventores>
     <inventor nombre="Robert Adler" invento="Mando a distancia" />
     <inventor nombre="Laszlo Josef Biro" invento="Bolígrafo" />
