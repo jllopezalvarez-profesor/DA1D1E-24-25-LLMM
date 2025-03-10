@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="libro">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="isbn" type="xs:string"></xs:element>
+                <xs:element name="titulo" type="xs:string"></xs:element>
+                <xs:element name="prestado" type="xs:boolean"></xs:element>
+                <xs:element name="ejemplares" type="xs:nonNegativeInteger"></xs:element>
+            </xs:sequence>
+            <xs:attribute name="fechaPub" type="xs:date"></xs:attribute>
+            <xs:attribute name="autor" type="xs:normalizedString"></xs:attribute>
+            <xs:attribute name="idioma" type="xs:language"></xs:attribute>
+            <xs:attribute name="prestable" type="xs:boolean"></xs:attribute>
+
+
+        </xs:complexType>
+
+    </xs:element>
+
+</xs:schema>

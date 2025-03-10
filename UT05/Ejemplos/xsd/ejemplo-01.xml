@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="ejemplo-01.xsd"
+    fechaPub="2020-10-15" autor="Juán de Dios Fernández" idioma="es" prestable="true">
+    <isbn>136546</isbn>
+    <titulo>Programación en Java</titulo>
+    <prestado>true</prestado>
+    <ejemplares>1</ejemplares>
+
+</libro>
