@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="ejercicio-21.xsd" isbn="1232-434-2233"
+    fecha-publicacion="1990-02">
+    <titulo></titulo>
+    <numPaginas>6</numPaginas>
+    <idioma>es-ES</idioma>
+    <dimensiones ancho="200" alto="320" grueso="20"></dimensiones>
+    <autor fecha-nacimiento="1950-06-04">
+        <nombre></nombre>
+        <apellidos></apellidos>
+        <nacionalidad></nacionalidad>
+    </autor>
+    <editorial>
+        <nombre></nombre>
+        <pais></pais>
+    </editorial>
+    <genero>
+    </genero>
+    <sinopsis></sinopsis>
+    <precio>123.4</precio>
+    <traductor>
+        <nombre></nombre>
+        <apellidos></apellidos>
+    </traductor>
+</libro>

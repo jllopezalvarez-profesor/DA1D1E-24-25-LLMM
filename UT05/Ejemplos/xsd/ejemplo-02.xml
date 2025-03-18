@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proyectos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="ejemplo-02.xsd">
+    <proyecto>
+        <direccion>
+            <fistname></fistname>
+            <lastname></lastname>
+        </direccion>
+        <coordinacion>
+            <empleado>
+                <fistname></fistname>
+                <lastname></lastname>
+            </empleado>
+        </coordinacion>
+        <comunicacion>
+            <fistname></fistname>
+            <lastname></lastname>
+        </comunicacion>
+
+    </proyecto>
+</proyectos>

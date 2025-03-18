@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="libro">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="titulo" type="xs:string" />
+                <xs:element name="numPaginas" type="xs:positiveInteger" />
+                <xs:element name="idioma" type="xs:language" />
+                <xs:element name="dimensiones" type="dimensions" />
+                <xs:element name="autor" type="autor" />
+                <xs:element name="editorial">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string" />
+                            <xs:element name="pais" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="genero" type="xs:string" />
+                <xs:element name="sinopsis" type="xs:string" />
+                <xs:element name="precio" type="xs:decimal" />
+                <xs:element name="traductor" type="persona" />
+            </xs:sequence>
+            <xs:attribute name="isbn" type="xs:string" use="required" />
+            <xs:attribute name="fecha-publicacion" type="xs:gYearMonth" use="required" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="dimensions">
+        <xs:attribute name="ancho" type="xs:positiveInteger" use="required" />
+        <xs:attribute name="alto" type="xs:positiveInteger" use="required" />
+        <xs:attribute name="grueso" type="xs:positiveInteger" use="optional" />
+    </xs:complexType>
+
+    <xs:complexType name="persona">
+        <xs:sequence>
+            <xs:element name="nombre" />
+            <xs:element name="apellidos" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="autor">
+        <xs:complexContent>
+            <xs:extension base="persona">
+                <xs:sequence>
+                    <xs:element name="nacionalidad" />
+                </xs:sequence>
+                <xs:attribute name="fecha-nacimiento" type="xs:date" use="required" />
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="proyectos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="proyecto">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="direccion">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="empleado">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="fistname" />
+                                                    <xs:element name="lastname" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="coordinacion">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="empleado">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="fistname" />
+                                                    <xs:element name="lastname" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="comunicacion">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="empleado">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="fistname" />
+                                                    <xs:element name="lastname" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

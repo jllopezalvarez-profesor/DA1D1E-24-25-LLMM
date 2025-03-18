@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="proyectos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="proyecto">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="direccion" type="employeeType" />
+                            <xs:element name="coordinacion">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="empleado" type="employeeType" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="comunicacion" type="managerType" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="employeeType">
+        <xs:sequence>
+            <xs:element name="fistname" />
+            <xs:element name="lastname" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="managerType">
+        <xs:complexContent>
+            <xs:extension base="employeeType">
+                <xs:sequence>
+                    <xs:element name="department" />
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+</xs:schema>
