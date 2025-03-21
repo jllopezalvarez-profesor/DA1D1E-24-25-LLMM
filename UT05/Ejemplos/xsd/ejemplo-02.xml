@@ -15,6 +15,7 @@
         <comunicacion>
             <fistname></fistname>
             <lastname></lastname>
+            <department></department>
         </comunicacion>
 
     </proyecto>

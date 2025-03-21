@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<temporada xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="ejercicio-24.xsd" anio="2000">
+    <jornada numero="1">
+        <partido numero="1">
+            <fecha>2000-02-02</fecha>
+            <estadio espectadores="49000">
+                La condomina</estadio>
+            <local>RC Murcia</local>
+            <visitante>Real Sociedad</visitante>
+            <resultado local="3" visitante="2" />
+        </partido>
+        <partido numero="2">
+            <fecha>2000-02-03</fecha>
+            <estadio>Santiago Bernabeu</estadio>
+            <local>Real Madrid</local>
+            <visitante>Villareal</visitante>
+            <aplazado />
+        </partido>
+    </jornada>
+    <!-- <jornada numero="2">
+       Aquí datos de la Jornada 2
+    </jornada> -->
+</temporada>
+    
