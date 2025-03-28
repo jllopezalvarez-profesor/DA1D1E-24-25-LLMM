@@ -1,0 +1,28 @@
+<!ELEMENT facturacion (comercio,periodo,tickets)>
+<!ATTLIST facturacion xmlns:xsi CDATA #IMPLIED>
+<!ATTLIST facturacion xsi:noNamespaceSchemaLocation CDATA #IMPLIED>
+<!ELEMENT comercio (nombre,direccion,telefono)>
+<!ATTLIST comercio cif CDATA #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT periodo (inicio,fin)>
+<!ELEMENT inicio (#PCDATA)>
+<!ELEMENT fin (#PCDATA)>
+<!ELEMENT tickets (ticket*)>
+<!ELEMENT ticket (importe-sin-iva,importe-iva,importe-iva-incluido,forma-pago,articulo+)>
+<!ATTLIST ticket codigo ID #REQUIRED>
+<!ELEMENT importe-sin-iva (#PCDATA)>
+<!ELEMENT importe-iva (#PCDATA)>
+<!ELEMENT importe-iva-incluido (#PCDATA)>
+<!ELEMENT forma-pago (efectivo | tarjeta)>
+<!ELEMENT efectivo EMPTY>
+<!ELEMENT tarjeta (titular,final-tarjeta)>
+<!ELEMENT titular (#PCDATA)>
+<!ELEMENT final-tarjeta (#PCDATA)>
+<!ELEMENT articulo (nombre,cantidad,precio-unitario,iva-aplicado,importe-iva,precio-unitario-iva,importe-total)>
+<!ELEMENT cantidad (#PCDATA)>
+<!ELEMENT precio-unitario (#PCDATA)>
+<!ELEMENT iva-aplicado (#PCDATA)>
+<!ELEMENT precio-unitario-iva (#PCDATA)>
+<!ELEMENT importe-total (#PCDATA)>

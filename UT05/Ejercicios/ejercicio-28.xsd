@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="facturacion">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="comercio" type="tipo-comercio" />
+                <xs:element name="periodo" type="tipo-periodo" />
+                <xs:element name="tickets">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ticket" type="tipo-ticket" minOccurs="0"
+                                maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="tipo-comercio">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="direccion" type="xs:string" />
+            <!-- 
+            El teléfono se pone como string por si hay teléfonos que 
+            empiecen por +34, o que empiecen por cero.
+            -->
+            <xs:element name="telefono" type="xs:string" />
+        </xs:sequence>
+        <!-- 
+        El tipo del CIF es string porque no se pide más validación
+        Se podría usar una expresión regular para ajustarlo más.
+         -->
+        <xs:attribute name="cif" type="xs:string" />
+    </xs:complexType>
+
+    <xs:complexType name="tipo-periodo">
+        <xs:sequence>
+            <xs:element name="inicio" type="xs:dateTime"></xs:element>
+            <xs:element name="fin" type="xs:dateTime"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="tipo-ticket">
+        <xs:sequence>
+            <xs:element name="importe-sin-iva"></xs:element>
+            <xs:element name="importe-iva"></xs:element>
+            <xs:element name="importe-iva-incluido"></xs:element>
+            <xs:element name="forma-pago" type="tipo-forma-pago" />
+            <xs:element name="articulo" type="linea-ticket" minOccurs="1" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="codigo" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="T\d{10}"></xs:pattern>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="fecha" type="xs:dateTime"></xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="tipo-forma-pago">
+        <xs:choice>
+            <xs:element name="efectivo">
+                <xs:complexType></xs:complexType>
+            </xs:element>
+            <xs:element name="tarjeta">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="titular" type="xs:string"></xs:element>
+                        <xs:element name="final-tarjeta">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="\d{4}"></xs:pattern>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="linea-ticket">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="cantidad" type="xs:decimal" />
+            <xs:element name="precio-unitario" type="xs:decimal" />
+            <xs:element name="iva-aplicado" type="tipo-iva" />
+            <xs:element name="importe-iva" type="xs:decimal" />
+            <xs:element name="precio-unitario-iva" type="xs:decimal" />
+            <xs:element name="importe-total" type="xs:decimal" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="tipo-iva">
+        <xs:restriction base="xs:nonNegativeInteger">
+            <xs:enumeration value="21"></xs:enumeration>
+            <xs:enumeration value="10"></xs:enumeration>
+            <xs:enumeration value="5"></xs:enumeration>
+            <xs:enumeration value="4"></xs:enumeration>
+            <xs:enumeration value="0"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

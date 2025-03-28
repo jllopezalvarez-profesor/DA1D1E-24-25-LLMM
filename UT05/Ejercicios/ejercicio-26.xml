@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE facturacion SYSTEM "ejercicio-27.dtd">
+<facturacion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="ejercicio-28.xsd">
+
+    <comercio cif="A443242S">
+        <nombre>La tienda de chuches</nombre>
+        <direccion>Calle del caramelo 5</direccion>
+        <telefono>123456789</telefono>
+    </comercio>
+
+    <periodo>
+        <inicio>2025-01-01T09:12:17</inicio>
+        <fin>2025-01-01T21:30:00</fin>
+    </periodo>
+
+    <tickets>
+        <ticket codigo="T2345675456">
+            <importe-sin-iva>100</importe-sin-iva>
+            <importe-iva>10</importe-iva>
+            <importe-iva-incluido>110</importe-iva-incluido>
+            <forma-pago>
+                <tarjeta>
+                    <titular>Francisco Pérez Fenández</titular>
+                    <final-tarjeta>2343</final-tarjeta>
+                </tarjeta>
+            </forma-pago>
+            <articulo>
+                <nombre>Gominolas</nombre>
+                <cantidad>100</cantidad>
+                <precio-unitario>0.4</precio-unitario>
+                <iva-aplicado>10</iva-aplicado>
+                <importe-iva>0.04</importe-iva>
+                <precio-unitario-iva>0.44</precio-unitario-iva>
+                <importe-total>44.0</importe-total>
+            </articulo>
+        </ticket>
+
+    </tickets>
+</facturacion>

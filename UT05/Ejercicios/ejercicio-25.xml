@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE clinica_veterinaria [
+    <!ELEMENT clinica_veterinaria (clinica, pacientes?)>
+    <!ELEMENT clinica (veterinario+)>
+    <!ELEMENT veterinario (#PCDATA)>
+    <!ATTLIST veterinario colegiado ID #REQUIRED>
+    <!ATTLIST clinica nombre CDATA #REQUIRED>
+    <!ATTLIST clinica direccion CDATA #REQUIRED>
+    <!ATTLIST clinica telefono CDATA #REQUIRED>
+]> -->
+
+<clinica_veterinaria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="ejercicio-25.xsd">
+    <clinica nombre="VetCare" direccion="Calle Salud, 45, Barcelona"
+        telefono="934567890">
+        <veterinario colegiado="vet12345">Dr. Marta López</veterinario>
+        <veterinario colegiado="vet12346">Dr. Marta López</veterinario>
+        <veterinario colegiado="vet12347">Dr. Marta López</veterinario>
+    </clinica>
+    <pacientes>
+        <paciente id="p001">
+            <nombre>Max</nombre>
+            <especie>Perro</especie>
+            <raza>Labrador</raza>
+            <edad>5</edad>
+            <peso>30.5</peso>
+            <propietario>
+                <nombre>Lucía Fernández</nombre>
+                <telefono>600123456</telefono>
+            </propietario>
+            <historial>
+                <consulta fecha="2025-02-15">
+                    <veterinario>vet12349</veterinario>
+                    <motivo>Vacunación anual</motivo>
+                    <diagnostico>Buen estado de salud</diagnostico>
+                    <tratamiento>Ninguno</tratamiento>
+                </consulta>
+                <consulta fecha="2024-10-10">
+                    <veterinario>vet12345</veterinario>
+                    <motivo>Infección en el oído</motivo>
+                    <diagnostico>Otitis</diagnostico>
+                    <tratamiento>Antibiótico por 7 días</tratamiento>
+                </consulta>
+            </historial>
+        </paciente>
+    </pacientes>
+</clinica_veterinaria>

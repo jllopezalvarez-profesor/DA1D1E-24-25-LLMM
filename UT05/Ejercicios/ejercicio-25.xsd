@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="clinica_veterinaria">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="clinica">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="veterinario" minOccurs="1" maxOccurs="5"
+                                type="veterinario" />
+                        </xs:sequence>
+                        <xs:attribute name="nombre" use="required" />
+                        <xs:attribute name="direccion" use="required" />
+                        <xs:attribute name="telefono" type="xs:integer" use="required" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="pacientes" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="paciente" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombre" type="xs:string" />
+                                        <xs:element name="especie" type="xs:string" />
+                                        <xs:element name="raza" type="xs:string" />
+                                        <xs:element name="edad" type="xs:string" />
+                                        <xs:element name="peso" type="xs:string" minOccurs="0" />
+                                        <xs:element name="propietario">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="nombre" type="xs:string" />
+                                                    <xs:element name="telefono" type="xs:string" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="historial">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="consulta"
+                                                        maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="veterinario"
+                                                                    type="xs:IDREF" />
+                                                                <xs:element name="motivo"
+                                                                    type="xs:string" />
+                                                                <xs:element name="diagnostico"
+                                                                    type="xs:string" />
+                                                                <xs:element name="tratamiento"
+                                                                    type="xs:string" minOccurs="0" />
+                                                            </xs:sequence>
+                                                            <xs:attribute name="fecha"
+                                                                type="xs:date" use="required" />
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="veterinario">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="colegiado" use="required"
+                    type="codigo-veterinario" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="codigo-veterinario">
+        <xs:restriction base="xs:ID">
+            <xs:pattern value="vet\d{5}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
