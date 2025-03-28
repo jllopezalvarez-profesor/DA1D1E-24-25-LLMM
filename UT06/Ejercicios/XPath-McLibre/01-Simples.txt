@@ -1,0 +1,42 @@
+XPath - Ejercicio 1-1 - Nombre del Instituto:
+    /ies/nombre
+    //nombre no sirve porque obtiene todos los nombres, incluidos los de ciclo
+
+XPath - Ejercicio 1-2 - Página web del Instituto:
+    /ies/web
+    //web sí funciona porque solo hay "web" en elemento "ies"
+
+XPath - Ejercicio 1-3 - Nombre de los Ciclos Formativos:
+    /ies/ciclos/ciclo/nombre
+    //ciclo/nombre
+    //nombre[../grado] retorcida, pero funciona. Busca elementos nombre que tienen un hermano "grado"
+
+XPath - Ejercicio 1-4 - Siglas por las que se conocen los Ciclos Formativos:
+    /ies/ciclos/ciclo/@id
+    //ciclo/@id
+    //@id Funciona porque no hay otros elementos con atributo id distintos de ciclo
+
+XPath - Ejercicio 1-5 - Años en los que se publicaron los decretos de título de los Ciclos Formativos:
+    /ies/ciclos/ciclo/decretoTitulo/@anio
+    //ciclo/decretoTitulo/@anio
+    //decretoTitulo/@anio
+    //@anio
+
+XPath - Ejercicio 1-6 - Ciclos Formativos de Grado Medio (se trata de obtener el elemento <ciclo> completo):
+    /ies/ciclos/ciclo[grado="Medio"]
+    /ies/ciclos/ciclo[./grado="Medio"]
+    /ies/ciclos/ciclo[/ies/ciclos/ciclo/grado="Medio"] ESto no funciona, porque para cada grado, vuelve a la raíz y busca ALGUNO que sea de grado medio, y eso SIEMPRE se cumple.
+    /ies/ciclos/ciclo/grado[.="Medio"]/.. Esto busca el "grado medio" y sube un nivel para obtener el padre (ciclo)
+
+XPath - Ejercicio 1-7 - Nombre de los Ciclos Formativos de Grado Superior:
+    /ies/ciclos/ciclo[grado="Superior"]/nombre
+    //ciclo[grado="Superior"]/nombre
+    /ies/ciclos/ciclo/grado[.="Superior"]/../nombre
+
+XPath - Ejercicio 1-8 - Nombre de los Ciclos Formativos anteriores a 2010:
+    /ies/ciclos/ciclo[decretoTitulo/@anio < 2010]/nombre
+    /ies/ciclos/ciclo/decretoTitulo/@anio[. < 2010]/../../nombre
+
+XPath - Ejercicio 1-9 - Nombre de los Ciclos Formativos de 2008 o 2010:
+    /ies/ciclos/ciclo[decretoTitulo/@anio = 2008 or decretoTitulo/@anio = 2010]/nombre
+    /ies/ciclos/ciclo[decretoTitulo/@anio = 2008]/nombre | /ies/ciclos/ciclo[decretoTitulo/@anio = 2010]/nombre
