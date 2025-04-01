@@ -40,3 +40,36 @@ XPath - Ejercicio 1-8 - Nombre de los Ciclos Formativos anteriores a 2010:
 XPath - Ejercicio 1-9 - Nombre de los Ciclos Formativos de 2008 o 2010:
     /ies/ciclos/ciclo[decretoTitulo/@anio = 2008 or decretoTitulo/@anio = 2010]/nombre
     /ies/ciclos/ciclo[decretoTitulo/@anio = 2008]/nombre | /ies/ciclos/ciclo[decretoTitulo/@anio = 2010]/nombre
+
+
+XPath - Ejercicio 2-1 - Nombre de los módulos que se imparten en el Instituto:
+    /ies/modulos/modulo/nombre
+    //nombre - Sirve porque el XML es muy simple y solo tiene nombres de módulos.
+
+XPath - Ejercicio 2-2 - Nombre de los módulos del ciclo ASIR:
+    /ies/modulos/modulo[ciclo="ASIR"]/nombre
+    /ies/modulos/modulo/ciclo[.="ASIR"]/../nombre
+
+XPath - Ejercicio 2-3 - Nombre de los módulos que se imparten en el segundo curso de cualquier ciclo:
+    /ies/modulos/modulo[curso="2"]/nombre
+    /ies/modulos/modulo/curso[.="2"]/../nombre
+
+XPath - Ejercicio 2-4 - Nombre de los módulos de menos de 5 horas semanales:
+    /ies/modulos/modulo[horasSemanales<5]/nombre
+
+XPath - Ejercicio 2-5 - Nombre de los módulos que se imparten en el primer curso de ASIR:
+    /ies/modulos/modulo[ciclo="ASIR" and curso="1"]/nombre
+    /ies/modulos/modulo[ciclo="ASIR"][curso="1"]/nombre
+
+XPath - Ejercicio 2-6 - Horas semanales de los módulos de más de 3 horas semanales:
+    /ies/modulos/modulo/horasSemanales[.>3]
+    /ies/modulos/modulo[horasSemanales>3]/horasSemanales
+
+
+
+
+
+
+
+
+
