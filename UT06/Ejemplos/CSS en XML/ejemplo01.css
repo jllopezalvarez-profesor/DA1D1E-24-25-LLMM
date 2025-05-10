@@ -1,0 +1,46 @@
+centroDeTrabajo {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    padding: 2em;
+}
+
+departamentos {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-bottom: 1em;
+}
+
+departamento {
+    background-color: slategray;
+    color: white;
+    padding: 2em;
+}
+
+empleados {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background-color: slategrey;
+    padding: 1em;
+}
+
+empleado {
+    text-align: center;
+    background-color: white;
+    padding: 1em 0;
+}
+
+empleado nombre,
+empleado apellidos {
+    display: block;
+}
+
+empleado idDepartamento {
+    display: none;
+}
+
+empleado:hover {
+    background-color: lightgray;
+    color: crimson;
+}

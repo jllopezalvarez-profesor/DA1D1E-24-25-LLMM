@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="ejemplo01.css" type="text/css"?>
+<centroDeTrabajo>
+    <departamentos>
+        <departamento id="D001" responsable="E001">
+            <nombre>Ventas</nombre>
+        </departamento>
+        <departamento id="D002" responsable="E002">
+            <nombre>Recursos Humanos</nombre>
+        </departamento>
+        <departamento id="D003" responsable="E003">
+            <nombre>Contabilidad</nombre>
+        </departamento>
+    </departamentos>
+    <empleados>
+        <empleado id="E001">
+            <nombre>Juan</nombre>
+            <apellidos>Pérez González</apellidos>
+            <idDepartamento>D001</idDepartamento>
+        </empleado>
+        <empleado id="E002">
+            <nombre>Maria</nombre>
+            <apellidos>López Martínez</apellidos>
+            <idDepartamento>D002</idDepartamento>
+        </empleado>
+        <empleado id="E003">
+            <nombre>Carlos</nombre>
+            <apellidos>Martínez Ruiz</apellidos>
+            <idDepartamento>D001</idDepartamento>
+        </empleado>
+        <!-- Añadiendo más empleados -->
+        <empleado id="E004">
+            <nombre>Laura</nombre>
+            <apellidos>García Sánchez</apellidos>
+            <idDepartamento>D002</idDepartamento>
+        </empleado>
+        <empleado id="E005">
+            <nombre>Antonio</nombre>
+            <apellidos>Fernández López</apellidos>
+            <idDepartamento>D001</idDepartamento>
+        </empleado>
+        <empleado id="E006">
+            <nombre>Ana</nombre>
+            <apellidos>Rodríguez Martínez</apellidos>
+            <idDepartamento>D003</idDepartamento>
+        </empleado>
+        <empleado id="E007">
+            <nombre>Pablo</nombre>
+            <apellidos>Díaz Pérez</apellidos>
+            <idDepartamento>D002</idDepartamento>
+        </empleado>
+        <empleado id="E008">
+            <nombre>Elena</nombre>
+            <apellidos>Gómez Rodríguez</apellidos>
+            <idDepartamento>D003</idDepartamento>
+        </empleado>
+        <empleado id="E009">
+            <nombre>David</nombre>
+            <apellidos>Ruiz Martín</apellidos>
+            <idDepartamento>D001</idDepartamento>
+        </empleado>
+        <empleado id="E010">
+            <nombre>Sofía</nombre>
+            <apellidos>Pérez García</apellidos>
+            <idDepartamento>D003</idDepartamento>
+        </empleado>
+    </empleados>
+</centroDeTrabajo>

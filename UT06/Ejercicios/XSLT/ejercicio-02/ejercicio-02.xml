@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="ejercicio-02.xsl" type="text/xsl"?>
+<padron-edad-sexo-2018>
+    <padron-edad-sexo-2018>
+        <Edad>de 00 a 04</Edad>
+        <Hombres>2751</Hombres>
+        <Mujeres>2479</Mujeres>
+        <Total>5230</Total>
+    </padron-edad-sexo-2018>
+    <padron-edad-sexo-2018>
+        <Edad>de 05 a 09</Edad>
+        <Hombres>2883</Hombres>
+        <Mujeres>2784</Mujeres>
+        <Total>5667</Total>
+    </padron-edad-sexo-2018>
+    <padron-edad-sexo-2018>
+        <Edad>de 10 a 14</Edad>
+        <Hombres>2956</Hombres>
+        <Mujeres>2634</Mujeres>
+        <Total>5590</Total>
+    </padron-edad-sexo-2018>
+    <padron-edad-sexo-2018>
+        <Edad>de 15 a 19</Edad>
+        <Hombres>2800</Hombres>
+        <Mujeres>2648</Mujeres>
+        <Total>5448</Total>
+    </padron-edad-sexo-2018>
+    <padron-edad-sexo-2018>
+        <Edad>de 20 a 24</Edad>
+        <Hombres>2849</Hombres>
+        <Mujeres>2656</Mujeres>
+        <Total>5505</Total>
+    </padron-edad-sexo-2018>
+    <padron-edad-sexo-2018>
+        <Edad>de 25 a 29</Edad>
+        <Hombres>3020</Hombres>
+        <Mujeres>2868</Mujeres>
+        <Total>5888</Total>
+    </padron-edad-sexo-2018>
+    <padron-edad-sexo-2018>
+        <Edad>de 30 a 34</Edad>
+        <Hombres>3235</Hombres>
+        <Mujeres>2938</Mujeres>
+        <Total>6173</Total>
+    </padron-edad-sexo-2018>
+    <padron-edad-sexo-2018>
+        <Edad>de 35 a 39</Edad>
+        <Hombres>4472</Hombres>
+        <Mujeres>3600</Mujeres>
+        <Total>8072</Total>
+    </padron-edad-sexo-2018>
+    <padron-edad-sexo-2018>
+        <Edad>de 40 a 44</Edad>
+        <Hombres>4905</Hombres>
+        <Mujeres>3847</Mujeres>
+        <Total>8752</Total>
+    </padron-edad-sexo-2018>
+    <padron-edad-sexo-2018>
+        <Edad>de 45 a 49</Edad>
+        <Hombres>4100</Hombres>
+        <Mujeres>3604</Mujeres>
+        <Total>7704</Total>
+    </padron-edad-sexo-2018>
+    <padron-edad-sexo-2018>
+        <Edad>de 50 a 54</Edad>
+        <Hombres>3632</Hombres>
+        <Mujeres>3353</Mujeres>
+        <Total>6985</Total>
+    </padron-edad-sexo-2018>
+    <padron-edad-sexo-2018>
+        <Edad>de 55 a 59</Edad>
+        <Hombres>2924</Hombres>
+        <Mujeres>2795</Mujeres>
+        <Total>5719</Total>
+    </padron-edad-sexo-2018>
+    <padron-edad-sexo-2018>
+        <Edad>de 60 a 64</Edad>
+        <Hombres>2251</Hombres>
+        <Mujeres>2264</Mujeres>
+        <Total>4515</Total>
+    </padron-edad-sexo-2018>
+    <padron-edad-sexo-2018>
+        <Edad>de 65 a 69</Edad>
+        <Hombres>1921</Hombres>
+        <Mujeres>1985</Mujeres>
+        <Total>3906</Total>
+    </padron-edad-sexo-2018>
+    <padron-edad-sexo-2018>
+        <Edad>de 70 a 74</Edad>
+        <Hombres>1650</Hombres>
+        <Mujeres>1895</Mujeres>
+        <Total>3545</Total>
+    </padron-edad-sexo-2018>
+    <padron-edad-sexo-2018>
+        <Edad>de 75 a 79</Edad>
+        <Hombres>1098</Hombres>
+        <Mujeres>1405</Mujeres>
+        <Total>2503</Total>
+    </padron-edad-sexo-2018>
+    <padron-edad-sexo-2018>
+        <Edad>de 80 a 84</Edad>
+        <Hombres>882</Hombres>
+        <Mujeres>1311</Mujeres>
+        <Total>2193</Total>
+    </padron-edad-sexo-2018>
+    <padron-edad-sexo-2018>
+        <Edad>de 85 a 89</Edad>
+        <Hombres>525</Hombres>
+        <Mujeres>896</Mujeres>
+        <Total>1421</Total>
+    </padron-edad-sexo-2018>
+    <padron-edad-sexo-2018>
+        <Edad>de 90 a 94</Edad>
+        <Hombres>189</Hombres>
+        <Mujeres>430</Mujeres>
+        <Total>619</Total>
+    </padron-edad-sexo-2018>
+    <padron-edad-sexo-2018>
+        <Edad>de 95 en adelante</Edad>
+        <Hombres>44</Hombres>
+        <Mujeres>87</Mujeres>
+        <Total>131</Total>
+    </padron-edad-sexo-2018>
+    <padron-edad-sexo-2018>
+        <Edad>Total</Edad>
+        <Hombres>49087</Hombres>
+        <Mujeres>46479</Mujeres>
+        <Total>95566</Total>
+    </padron-edad-sexo-2018>
+</padron-edad-sexo-2018>

@@ -1,0 +1,3 @@
+Esta parte está relacionada con el uso de templates 
+más específicas en la XSLT. Esto no entra en el examen
+de evaluación del RA.

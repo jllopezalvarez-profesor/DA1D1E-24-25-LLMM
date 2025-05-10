@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="biblioteca-d.xslt" type="text/xsl"?>
+
+<biblioteca nombreIES="Clara del Rey">
+    <libro>
+        <titulo>La mujer del viajero en el tiempo</titulo>
+        <autor>Audry Niffeneger</autor>
+        <anio>2003</anio>
+        <genero>Novela</genero>
+        <subgeneros>
+            <subgenero>Fantástica</subgenero>
+            <subgenero>Romántica</subgenero>
+            <subgenero>Ciencia Ficción</subgenero>
+        </subgeneros>
+        <tituloOriginal>
+            The Time Traveler's Wife
+        </tituloOriginal>
+    </libro>
+    <libro>
+        <titulo>El aprendiz de guerrero</titulo>
+        <autor>Lois McMaster Bujold</autor>
+        <anio>1986</anio>
+        <genero>Novela</genero>
+        <subgeneros>
+            <subgenero>Ficción especulativa</subgenero>
+            <subgenero>Ciencia Ficción</subgenero>
+        </subgeneros>
+        <tituloOriginal>
+            The warrior's Apprentice
+        </tituloOriginal>
+    </libro>
+    <libro>
+        <titulo>El Juego de Ender</titulo>
+        <autor>Orson Scott Card</autor>
+        <anio>1985</anio>
+        <genero>Novela</genero>
+        <subgeneros>
+            <subgenero>Ciencia Ficción</subgenero>
+        </subgeneros>
+        <tituloOriginal>
+            Ender's Game
+        </tituloOriginal>
+    </libro>
+</biblioteca>

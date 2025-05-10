@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="biblioteca.xslt" type="text/xsl"?>
+<biblioteca>
+    <libro>
+        <titulo>La mujer del viajero en el tiempo</titulo>
+        <autor>Audry Niffeneger</autor>
+        <anio>2003</anio>
+        <genero>Novela</genero>
+        <!-- <subgeneros>
+            <subgenero>Fantástica</subgenero>
+            <subgenero>Romántica</subgenero>
+            <subgenero>Ciencia Ficción</subgenero>
+        </subgeneros> -->
+        <tituloOriginal>
+            The Time Traveler's Wife
+        </tituloOriginal>
+        <imagen>https://images-na.ssl-images-amazon.com/images/I/81rM98lwReL.jpg</imagen>
+    </libro>
+    <libro>
+        <titulo>El aprendiz de guerrero</titulo>
+        <autor>Lois McMaster Bujold</autor>
+        <anio>1986</anio>
+        <genero>Novela</genero>
+        <subgeneros>
+            <subgenero>Ficción especulativa</subgenero>
+            <subgenero>Ciencia Ficción</subgenero>
+        </subgeneros>
+        <tituloOriginal>
+            The warrior's Apprentice
+        </tituloOriginal>
+        <imagen>https://m.media-amazon.com/images/I/51mcPX66oWL.jpg</imagen>        
+    </libro>
+    <libro>
+        <titulo>El Juego de Ender</titulo>
+        <autor>Orson Scott Card</autor>
+        <anio>1985</anio>
+        <genero>Novela</genero>
+        <subgeneros>
+            <subgenero>Ciencia Ficción</subgenero>
+        </subgeneros>
+        <tituloOriginal>
+            Ender's Game
+        </tituloOriginal>
+        <imagen>https://tercerafundacion.net/imagenes/portada/P-00000307.jpg</imagen>        
+    </libro>
+    <libro>
+        <titulo>1984</titulo>
+        <autor>George Orwell</autor>
+        <anio>1949</anio>
+        <genero>Novela</genero>
+        <subgeneros>
+            <subgenero>Ciencia Ficción</subgenero>
+            <subgenero>Distopía</subgenero>
+        </subgeneros>
+        <tituloOriginal>
+            1984
+        </tituloOriginal>
+        <imagen>https://images.cdn2.buscalibre.com/fit-in/360x360/2e/01/2e015310e33c2cdabbc98f5c29b5a700.jpg</imagen>
+    </libro>
+
+
+</biblioteca>
