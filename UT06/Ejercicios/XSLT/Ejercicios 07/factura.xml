@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="ejercicio07B.xslt" type="text/xsl"?>
+<facturas>
+    <factura numFactura="2022-1254" fechaEmision="2022-04-20">
+        <partes>
+            <proveedor>
+                <identificacion tipo="CIF">G33524125</identificacion>
+                <nombre>Pinturas Martínez</nombre>
+                <domicilio>Calle Albacete. n.º 3. Madrid 28027</domicilio>
+                <telefono>91111222333</telefono>
+                <contacto>
+                    <nombre>Carlos Martínez Beltrán</nombre>
+                    <email>cmartinezb@pinturasmartinez.com</email>
+                </contacto>
+            </proveedor>
+            <cliente>
+                <identificacion tipo="NIF">69710760Z</identificacion>
+                <nombre>Carlos Pérez Pérez</nombre>
+                <domicilio>Ronda de Valencia. 4. Madrid 28003</domicilio>
+                <telefono>605589944</telefono>
+                <email>cmartinezb@pinturasmartinez.com</email>
+            </cliente>
+        </partes>
+        <importes>
+            <totalSinIva>79.62</totalSinIva>
+            <totalConIva>79.62</totalConIva>
+            <ivas>
+                <iva porcentaje="10">
+                    <base>31.20</base>
+                    <importe>2.12</importe>
+                </iva>
+                <iva porcentaje="16">
+                    <base>39.05</base>
+                    <importe>6.25</importe>
+                </iva>
+            </ivas>
+        </importes>
+        <articulos>
+            <articulo>
+                <concepto>Pintura plástica blanca</concepto>
+                <cantidad>20.00</cantidad>
+                <unidades>Kg</unidades>
+                <precioUnitario>1.56</precioUnitario>
+                <importeSinIva>31.20</importeSinIva>
+                <tipoIva>10%</tipoIva>
+                <iva>3.12</iva>
+                <importeConIva>34.32</importeConIva>
+            </articulo>
+            <articulo>
+                <concepto>Recambio rodillo</concepto>
+                <cantidad>5.00</cantidad>
+                <unidades>Ud</unidades>
+                <precioUnitario>2.50</precioUnitario>
+                <importeSinIva>12.50</importeSinIva>
+                <tipoIva>16%</tipoIva>
+                <iva>2.00</iva>
+                <importeConIva>14.50</importeConIva>
+            </articulo>
+            <articulo>
+                <concepto>Mango rodillo extensible</concepto>
+                <cantidad>2.00</cantidad>
+                <unidades>Ud</unidades>
+                <precioUnitario>7.85</precioUnitario>
+                <importeSinIva>15.70</importeSinIva>
+                <tipoIva>16%</tipoIva>
+                <iva>2.51</iva>
+                <importeConIva>18.21</importeConIva>
+            </articulo>
+            <articulo>
+                <concepto>Papel protección 1.50 ancho</concepto>
+                <cantidad>30.00</cantidad>
+                <unidades>Metro</unidades>
+                <precioUnitario>0.22</precioUnitario>
+                <importeSinIva>6.60</importeSinIva>
+                <tipoIva>16%</tipoIva>
+                <iva>1.06</iva>
+                <importeConIva>7.66</importeConIva>
+            </articulo>
+            <articulo>
+                <concepto>Cinta de carrocero 35mm</concepto>
+                <cantidad>5.00</cantidad>
+                <unidades>Rollo</unidades>
+                <precioUnitario>0.85</precioUnitario>
+                <importeSinIva>4.25</importeSinIva>
+                <tipoIva>16%</tipoIva>
+                <iva>0.68</iva>
+                <importeConIva>4.93</importeConIva>
+            </articulo>
+        </articulos>
+    </factura>
+</facturas>

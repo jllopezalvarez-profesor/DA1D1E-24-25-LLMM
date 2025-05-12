@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="Ejercicio03.xslt" type="text/xsl"?> 
+<barrios-extension>
+  <barrio>
+    <nombre_barrio>ANGELES (LOS)-APOLONIA</nombre_barrio>
+    <km2>0.331</km2>
+  </barrio>
+  <barrio>
+    <nombre_barrio>CORAZON DE MARIA</nombre_barrio>
+    <km2>0.605</km2>
+  </barrio>
+  <barrio>
+    <nombre_barrio>PARROQUIAS ALTAS</nombre_barrio>
+    <km2>0.141</km2>
+  </barrio>
+  <barrio>
+    <nombre_barrio>SAN ANTONIO</nombre_barrio>
+    <km2>0.512</km2>
+  </barrio>
+  <barrio>
+    <nombre_barrio>SAN CRISTOBAL</nombre_barrio>
+    <km2>1.098</km2>
+  </barrio>
+  <barrio>
+    <nombre_barrio>SAN JOSE</nombre_barrio>
+    <km2>0.873</km2>
+  </barrio>
+  <barrio>
+    <nombre_barrio>SAN MATEO</nombre_barrio>
+    <km2>0.522</km2>
+  </barrio>
+  <barrio>
+    <nombre_barrio>SANTA QUITERIA</nombre_barrio>
+    <km2>2.210</km2>
+  </barrio>
+  <barrio>
+    <nombre_barrio>SANTIAGO</nombre_barrio>
+    <km2>10.257</km2>
+  </barrio>
+  <barrio>
+    <nombre_barrio>SUTULLENA</nombre_barrio>
+    <km2>1.315</km2>
+  </barrio>
+  <barrio>
+    <nombre_barrio>VIÑA (LA)</nombre_barrio>
+    <km2>0.320</km2>
+  </barrio>
+  <barrio>
+    <nombre_barrio>VIRGEN DE LAS HUERTAS</nombre_barrio>
+    <km2>0.315</km2>
+  </barrio>
+</barrios-extension>

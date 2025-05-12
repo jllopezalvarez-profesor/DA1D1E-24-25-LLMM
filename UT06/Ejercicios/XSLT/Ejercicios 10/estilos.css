@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main {
+    background-color: rgb(240, 240, 240);
+    padding: 1em;
+}
+
+article {
+    background-color: white;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+h2 {
+    border-bottom: 4px double black;
+}
+
+h3 {
+    border-bottom: 1px dotted slateblue;
+}
+
+table.productosPedido {
+    border-collapse: separate;
+    border: 1px solid slateblue;
+}
+
+table td {
+    border: 1px solid slateblue;
+}
+
+table th {
+    background-color: slateblue;
+    color: white;
+}

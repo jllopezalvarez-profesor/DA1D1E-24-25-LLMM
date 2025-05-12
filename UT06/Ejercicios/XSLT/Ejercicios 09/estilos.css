@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+
+/*
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+*/
+
+div.nav-main-container{
+    width: 100%;
+    display: flex;
+    row-gap: 1.5em;
+    column-gap: 1.5em;
+}
+
+
+nav{
+    background-color: rgb(201, 224, 255);
+    padding: 1em;
+    
+}
+
+main{
+    background-color: rgb(240, 240, 240);
+    flex-grow: 1;
+    /* width: 100%; */
+    padding: 1em;
+}
+
+article{
+    background-color: white;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+article img{
+    float: right;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin:0;
+}
+
+nav > ul > li{
+    padding: .25em;
+    margin-bottom: .25em;
+}
+
+nav > ul > li > ul{
+    background-color: white;
+    padding: 1em;
+}
+
+nav > ul > li > ul > li > a{
+    display: block;
+    background-color: aliceblue;
+    margin-bottom: 2px;
+    padding: .25em;;
+    color: navy;
+}
+nav > ul > li > ul > li > a:hover{
+    background-color: navy;
+    color: white;
+}
+
+nav > ul > li > ul > li > a.actual{
+    background-color: rgb(9, 173, 255);
+    color: white;
+}
