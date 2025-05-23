@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alquilerCoches>
+    <flota>
+        <coche matricula="M0001ABC">
+            <marca>Ford</marca>
+            <modelo>Fiesta</modelo>
+            <plazas>4</plazas>
+            <puertas>5</puertas>
+            <motor>
+                <combustion cilindrada="1500" />
+            </motor>
+        </coche>
+        <coche matricula="M0002CDE">
+            <marca>Toyota</marca>
+            <modelo>Corolla Sedán</modelo>
+            <plazas>5</plazas>
+            <puertas>4</puertas>
+            <motor>
+                <hibrido cilindrada="1800" />
+            </motor>
+        </coche>
+        <coche matricula="M0003XYZ">
+            <marca>Tesla</marca>
+            <modelo>Model 3</modelo>
+            <plazas>5</plazas>
+            <puertas>4</puertas>
+            <motor>
+                <electrico />
+            </motor>
+        </coche>
+    </flota>
+    <alquileres>
+        <alquiler litrosCombustibleIniciales="40.0" litrosCombustibleFinales="30.4">
+            <coche matricula="M0001ABC" />
+            <fechaInicio>2024-04-17T09:00:30</fechaInicio>
+            <fechaFin>2024-04-19T12:00:00</fechaFin>
+            <cliente dni="12345678X" fechaCarnetConducir="2020-05">
+                <nombre>Juan</nombre>
+                <apellidos>García Pérez</apellidos>
+            </cliente>
+        </alquiler>
+        <alquiler>
+            <coche matricula="M0003XYZ" />
+            <fechaInicio>2024-04-12T10:30:00</fechaInicio>
+            <fechaFin>2024-04-17T17:30:00</fechaFin>
+            <cliente dni="98765432Y" fechaCarnetConducir="2019-10">
+                <nombre>María</nombre>
+                <apellidos>Rodríguez López</apellidos>
+            </cliente>
+        </alquiler>
+    </alquileres>
+</alquilerCoches>

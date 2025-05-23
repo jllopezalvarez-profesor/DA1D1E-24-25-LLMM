@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="alquilerCoches">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="flota">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="coche" maxOccurs="unbounded" type="tipo-coche" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="alquileres">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="alquiler" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="coche">
+                                            <xs:complexType>
+                                                <xs:attribute name="matricula" use="required" type="xs:IDREF" />
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="fechaInicio" type="xs:dateTime" />
+                                        <xs:element name="fechaFin" type="xs:dateTime" />
+                                        <xs:element name="cliente">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="nombre" type="xs:string" />
+                                                    <xs:element name="apellidos" type="xs:string" />
+                                                </xs:sequence>
+                                                <xs:attribute name="dni" use="required" />
+                                                <xs:attribute name="fechaCarnetConducir"
+                                                    use="required" type="xs:gYearMonth" />
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="litrosCombustibleIniciales"
+                                        type="tipo-combustible" use="optional" />
+                                    <xs:attribute name="litrosCombustibleFinales" type="xs:decimal" use="optional" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:complexType name="tipo-coche">
+        <xs:sequence>
+            <xs:element name="marca" type="xs:string" />
+            <xs:element name="plazas" type="xs:integer" />
+            <xs:element name="modelo" type="xs:string" />
+            <xs:element name="puertas" type="tipo-puertas" />
+            <xs:element name="motor" type="tipo-motor"/>
+        </xs:sequence>
+        <xs:attribute name="matricula" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:ID">
+                    <xs:pattern value="M[0-9]{4}[A-Z]{3}"></xs:pattern>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+
+    <xs:simpleType name="tipo-puertas">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="2"></xs:minInclusive>
+            <xs:maxInclusive value="5"></xs:maxInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipo-puertas-alternativo">
+        <xs:restriction base="xs:integer">
+            <xs:enumeration value="2" />
+            <xs:enumeration value="3" />
+            <xs:enumeration value="4" />
+            <xs:enumeration value="5" />
+        </xs:restriction>
+
+    </xs:simpleType>
+
+    <xs:complexType name="tipo-motor">
+        <xs:choice>
+            <xs:element name="combustion">
+                <xs:complexType>
+                    <xs:attribute name="cilindrada"
+                        type="tipo-cilindrada" use="required" />
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="hibrido">
+                <xs:complexType>
+                    <xs:attribute name="cilindrada"
+                        type="tipo-cilindrada" use="required" />
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="electrico">
+                <xs:complexType>
+
+                </xs:complexType>
+            </xs:element>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:simpleType name="tipo-cilindrada">
+        <xs:restriction base="xs:nonNegativeInteger">
+            <xs:minExclusive value="1000"></xs:minExclusive>
+            
+        </xs:restriction>
+    </xs:simpleType>
+    
+    
+   <xs:simpleType name="tipo-combustible">
+        <xs:restriction base="xs:decimal" >
+            <xs:minExclusive value="0"/>
+        </xs:restriction>
+   </xs:simpleType> 
+    
+    
+    
+</xs:schema>

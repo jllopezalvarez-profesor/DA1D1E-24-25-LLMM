@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>Listado de Pokémon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="pokemon-a.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between">
+                <h1><a href="javascript://"
+                        class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                        Pokémon database
+                    </a></h1>
+                <div class="text-end">
+                    <a class="btn btn-outline-light me-2" href="javascript://">Login</a><a class="btn btn-warning"
+                        href="javascript://">Registrarse</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container py-3">
+            <section class="initial">
+                <h2 class="text-center">Pokémon iniciales</h2>
+                <div class="d-flex flex-wrap justify-content-evenly">
+                    <article class="card m-3 pokemon-card">
+                        <div class="card-img-top mb-0 pt-0">
+                            <img alt="Imagen frontal de bulbasaur"
+                                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"><img
+                                alt="Imagen trasera de bulbasaur"
+                                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png">
+                        </div>
+                        <div class="card-body mt-0 pt-0">
+                            <h3 class="card-title">bulbasaur</h3>
+                            <div class="card-text">
+                                <p class="btn btn-outline-dark">
+                                    Experiencia base:
+                                    <span class="badge text-bg-danger">64</span>
+                                </p>
+                                <p class="btn btn-outline-dark">Estatura: <span class="badge text-bg-secondary">7</span>
+                                </p>
+                                <p class="btn btn-outline-dark">Peso: <span class="badge text-bg-secondary">69</span>
+                                </p>
+                            </div>
+                            <a href="https://pokeapi.co/api/v2/pokemon/1/" target="_blank" class="btn btn-primary">Ver
+                                datos completos de bulbasaur</a>
+                        </div>
+                    </article>
+                    <article class="card m-3 pokemon-card">
+                        <div class="card-img-top mb-0 pt-0">
+                            <img alt="Imagen frontal de charmander"
+                                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"><img
+                                alt="Imagen trasera de charmander"
+                                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/4.png">
+                        </div>
+                        <div class="card-body mt-0 pt-0">
+                            <h3 class="card-title">charmander</h3>
+                            <div class="card-text">
+                                <p class="btn btn-outline-dark">
+                                    Experiencia base:
+                                    <span class="badge text-bg-danger">62</span>
+                                </p>
+                                <p class="btn btn-outline-dark">Estatura: <span class="badge text-bg-secondary">6</span>
+                                </p>
+                                <p class="btn btn-outline-dark">Peso: <span class="badge text-bg-secondary">85</span>
+                                </p>
+                            </div>
+                            <a href="https://pokeapi.co/api/v2/pokemon/4/" target="_blank" class="btn btn-primary">Ver
+                                datos completos de charmander</a>
+                        </div>
+                    </article>
+                    <article class="card m-3 pokemon-card">
+                        <div class="card-img-top mb-0 pt-0">
+                            <img alt="Imagen frontal de pikachu"
+                                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"><img
+                                alt="Imagen trasera de pikachu"
+                                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png">
+                        </div>
+                        <div class="card-body mt-0 pt-0">
+                            <h3 class="card-title">pikachu</h3>
+                            <div class="card-text">
+                                <p class="btn btn-outline-dark">
+                                    Experiencia base:
+                                    <span class="badge text-bg-warning">112</span>
+                                </p>
+                                <p class="btn btn-outline-dark">Estatura: <span class="badge text-bg-secondary">4</span>
+                                </p>
+                                <p class="btn btn-outline-dark">Peso: <span class="badge text-bg-secondary">60</span>
+                                </p>
+                            </div>
+                            <a href="https://pokeapi.co/api/v2/pokemon/25/" target="_blank" class="btn btn-primary">Ver
+                                datos completos de pikachu</a>
+                        </div>
+                    </article>
+                    <article class="card m-3 pokemon-card">
+                        <div class="card-img-top mb-0 pt-0">
+                            <img alt="Imagen frontal de squirtle"
+                                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"><img
+                                alt="Imagen trasera de squirtle"
+                                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/7.png">
+                        </div>
+                        <div class="card-body mt-0 pt-0">
+                            <h3 class="card-title">squirtle</h3>
+                            <div class="card-text">
+                                <p class="btn btn-outline-dark">
+                                    Experiencia base:
+                                    <span class="badge text-bg-danger">63</span>
+                                </p>
+                                <p class="btn btn-outline-dark">Estatura: <span class="badge text-bg-secondary">5</span>
+                                </p>
+                                <p class="btn btn-outline-dark">Peso: <span class="badge text-bg-secondary">90</span>
+                                </p>
+                            </div>
+                            <a href="https://pokeapi.co/api/v2/pokemon/7/" target="_blank" class="btn btn-primary">Ver
+                                datos completos de squirtle</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section class="initial">
+                <h2 class="text-center">Pokémon legendarios</h2>
+                <div class="d-flex flex-wrap justify-content-evenly">
+                    <article class="card m-3 pokemon-card">
+                        <div class="card-img-top mb-0 pt-0">
+                            <img alt="Imagen frontal de mewtwo"
+                                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png"><img
+                                alt="Imagen trasera de mewtwo"
+                                src="https://dummyimage.com/96x96/fff/000.png&amp;text=NO+DISPONIBLE">
+                        </div>
+                        <div class="card-body mt-0 pt-0">
+                            <h3 class="card-title">mewtwo</h3>
+                            <div class="card-text">
+                                <p class="btn btn-outline-dark">
+                                    Experiencia base:
+                                    <span class="badge text-bg-success">340</span>
+                                </p>
+                                <p class="btn btn-outline-dark">Estatura: <span
+                                        class="badge text-bg-secondary">20</span></p>
+                                <p class="btn btn-outline-dark">Peso: <span class="badge text-bg-secondary">1220</span>
+                                </p>
+                            </div>
+                            <a href="https://pokeapi.co/api/v2/pokemon/150/" target="_blank" class="btn btn-primary">Ver
+                                datos completos de mewtwo</a>
+                        </div>
+                    </article>
+                    <article class="card m-3 pokemon-card">
+                        <div class="card-img-top mb-0 pt-0">
+                            <img alt="Imagen frontal de moltres"
+                                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/146.png"><img
+                                alt="Imagen trasera de moltres"
+                                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/146.png">
+                        </div>
+                        <div class="card-body mt-0 pt-0">
+                            <h3 class="card-title">moltres</h3>
+                            <div class="card-text">
+                                <p class="btn btn-outline-dark">
+                                    Experiencia base:
+                                    <span class="badge text-bg-success">290</span>
+                                </p>
+                                <p class="btn btn-outline-dark">Estatura: <span
+                                        class="badge text-bg-secondary">20</span></p>
+                                <p class="btn btn-outline-dark">Peso: <span class="badge text-bg-secondary">600</span>
+                                </p>
+                            </div>
+                            <a href="https://pokeapi.co/api/v2/pokemon/146/" target="_blank" class="btn btn-primary">Ver
+                                datos completos de moltres</a>
+                        </div>
+                    </article>
+                    <article class="card m-3 pokemon-card">
+                        <div class="card-img-top mb-0 pt-0">
+                            <img alt="Imagen frontal de articuno"
+                                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png"><img
+                                alt="Imagen trasera de articuno"
+                                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/144.png">
+                        </div>
+                        <div class="card-body mt-0 pt-0">
+                            <h3 class="card-title">articuno</h3>
+                            <div class="card-text">
+                                <p class="btn btn-outline-dark">
+                                    Experiencia base:
+                                    <span class="badge text-bg-success">290</span>
+                                </p>
+                                <p class="btn btn-outline-dark">Estatura: <span
+                                        class="badge text-bg-secondary">17</span></p>
+                                <p class="btn btn-outline-dark">Peso: <span class="badge text-bg-secondary">554</span>
+                                </p>
+                            </div>
+                            <a href="https://pokeapi.co/api/v2/pokemon/144/" target="_blank" class="btn btn-primary">Ver
+                                datos completos de articuno</a>
+                        </div>
+                    </article>
+                    <article class="card m-3 pokemon-card">
+                        <div class="card-img-top mb-0 pt-0">
+                            <img alt="Imagen frontal de zapdos"
+                                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png"><img
+                                alt="Imagen trasera de zapdos"
+                                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/145.png">
+                        </div>
+                        <div class="card-body mt-0 pt-0">
+                            <h3 class="card-title">zapdos</h3>
+                            <div class="card-text">
+                                <p class="btn btn-outline-dark">
+                                    Experiencia base:
+                                    <span class="badge text-bg-success">290</span>
+                                </p>
+                                <p class="btn btn-outline-dark">Estatura: <span
+                                        class="badge text-bg-secondary">16</span></p>
+                                <p class="btn btn-outline-dark">Peso: <span class="badge text-bg-secondary">526</span>
+                                </p>
+                            </div>
+                            <a href="https://pokeapi.co/api/v2/pokemon/145/" target="_blank" class="btn btn-primary">Ver
+                                datos completos de zapdos</a>
+                        </div>
+                    </article>
+                    <article class="card m-3 pokemon-card">
+                        <div class="card-img-top mb-0 pt-0">
+                            <img alt="Imagen frontal de mew"
+                                src="https://dummyimage.com/96x96/fff/000.png&amp;text=NO+DISPONIBLE"><img
+                                alt="Imagen trasera de mew"
+                                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/151.png">
+                        </div>
+                        <div class="card-body mt-0 pt-0">
+                            <h3 class="card-title">mew</h3>
+                            <div class="card-text">
+                                <p class="btn btn-outline-dark">
+                                    Experiencia base:
+                                    <span class="badge text-bg-success">300</span>
+                                </p>
+                                <p class="btn btn-outline-dark">Estatura: <span class="badge text-bg-secondary">4</span>
+                                </p>
+                                <p class="btn btn-outline-dark">Peso: <span class="badge text-bg-secondary">40</span>
+                                </p>
+                            </div>
+                            <a href="https://pokeapi.co/api/v2/pokemon/151/" target="_blank" class="btn btn-primary">Ver
+                                datos completos de mew</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-center py-3"><a href="https://iesclaradelrey.es"
+                    target="_blank" class="mb-3 text-decoration-none">IES Clara del Rey</a></div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

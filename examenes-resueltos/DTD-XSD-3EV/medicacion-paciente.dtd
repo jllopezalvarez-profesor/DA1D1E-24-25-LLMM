@@ -1,0 +1,25 @@
+<!ELEMENT pacientes (paciente+)>
+<!ELEMENT paciente (datosPersonales,medicacion)>
+<!ATTLIST paciente dni ID #REQUIRED>
+<!ELEMENT datosPersonales (nombre,primer-apellido,segundo-apellido?,fecha-nacimiento,peso,altura,historial)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT primer-apellido (#PCDATA)>
+<!ELEMENT segundo-apellido (#PCDATA)>
+<!ELEMENT fecha-nacimiento (#PCDATA)>
+<!ELEMENT peso (#PCDATA)>
+<!ELEMENT altura (#PCDATA)>
+<!ELEMENT historial (enfermedades?,alergias?)>
+<!ELEMENT enfermedades (enfermedad*)>
+<!ELEMENT enfermedad (#PCDATA)>
+<!ELEMENT alergias (alergia*)>
+<!ELEMENT alergia (#PCDATA)>
+<!ELEMENT medicacion (medicamento*)>
+<!ELEMENT medicamento (cantidad,frecuencia,duracionTratamiento?,indicaciones)>
+<!ATTLIST medicamento nombre NMTOKEN #REQUIRED>
+<!ATTLIST medicamento tipo (Comprimidos|Cápsulas|Sobres|Inyectables) #IMPLIED>
+<!ATTLIST medicamento dosis NMTOKEN #REQUIRED>
+<!ELEMENT cantidad (#PCDATA)>
+<!ELEMENT frecuencia (#PCDATA)>
+<!ELEMENT duracionTratamiento (#PCDATA)>
+<!ELEMENT indicaciones (indicacion+)>
+<!ELEMENT indicacion (#PCDATA)>

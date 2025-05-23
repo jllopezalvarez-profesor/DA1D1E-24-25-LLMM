@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE pacientes SYSTEM "medicacion-paciente.dtd">
+<pacientes>
+    <paciente dni="D1234567X">
+        <datosPersonales>
+            <nombre>Juan</nombre>
+            <primer-apellido>García</primer-apellido>
+            <segundo-apellido>Martín</segundo-apellido>
+            <fecha-nacimiento>1970-05-10</fecha-nacimiento>
+            <peso>75</peso>
+            <altura>175</altura>
+            <historial>
+                <enfermedades>
+                    <enfermedad>Hipertensión</enfermedad>
+                    <enfermedad>Diabetes tipo 2</enfermedad>
+                </enfermedades>
+                <alergias>
+                    <alergia>Penicilina</alergia>
+                </alergias>
+            </historial>
+        </datosPersonales>
+        <medicacion>
+            <medicamento nombre="Paracetamol" tipo="Comprimidos" dosis="650mg">
+                <cantidad>1</cantidad>
+                <frecuencia>Una vez al día, por la mañana con el desayuno</frecuencia>
+                <duracionTratamiento>Indefinida</duracionTratamiento>
+                <indicaciones>
+                    <indicacion>Tomar con alimentos</indicacion>
+                    <indicacion>Evitar el alcohol mientras se toma este medicamento</indicacion>
+                </indicaciones>
+            </medicamento>
+            <medicamento nombre="Losartán" tipo="Cápsulas" dosis="50mg">
+                <cantidad>2</cantidad>
+                <frecuencia>Una vez al día, por la noche</frecuencia>
+                <duracionTratamiento>Indefinida</duracionTratamiento>
+                <indicaciones>
+                    <indicacion>Tomar antes de dormir</indicacion>
+                </indicaciones>
+            </medicamento>
+        </medicacion>
+    </paciente>
+</pacientes>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="pokemon.xslt" type="text/xsl"?>
+<pokemons>
+    <pokemon class="initial">
+        <name>bulbasaur</name>
+        <url>https://pokeapi.co/api/v2/pokemon/1/</url>
+        <base_experience>64</base_experience>
+        <height>7</height>
+        <id>1</id>
+        <is_default>true</is_default>
+        <sprites>
+            <back_default>https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png</back_default>
+            <!-- <front_default>https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png</front_default> -->
+        </sprites>
+        <weight>69</weight>
+    </pokemon>
+    <pokemon class="initial">
+        <name>charmander</name>
+        <url>https://pokeapi.co/api/v2/pokemon/4/</url>
+        <base_experience>62</base_experience>
+        <height>6</height>
+        <id>4</id>
+        <sprites>
+            <back_default>https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/4.png</back_default>
+            <front_default>https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png</front_default>
+        </sprites>
+        <weight>85</weight>
+    </pokemon>
+    <pokemon class="initial">
+        <name>squirtle</name>
+        <url>https://pokeapi.co/api/v2/pokemon/7/</url>
+        <base_experience>63</base_experience>
+        <height>5</height>
+        <id>7</id>
+        <sprites>
+            <back_default>https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/7.png</back_default>
+            <front_default>https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png</front_default>
+        </sprites>
+        <weight>90</weight>
+    </pokemon>
+    <pokemon class="initial">
+        <name>pikachu</name>
+        <url>https://pokeapi.co/api/v2/pokemon/25/</url>
+        <base_experience>112</base_experience>
+        <height>4</height>
+        <id>25</id>
+        <sprites>
+            <back_default>https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png</back_default>
+            <front_default>https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png</front_default>
+        </sprites>
+        <weight>60</weight>
+    </pokemon>
+    <pokemon class="legendary">
+        <name>articuno</name>
+        <url>https://pokeapi.co/api/v2/pokemon/144/</url>
+        <base_experience>290</base_experience>
+        <height>17</height>
+        <id>144</id>
+        <sprites>
+            <back_default>https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/144.png</back_default>
+            <front_default>https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png</front_default>
+        </sprites>
+        <weight>554</weight>
+    </pokemon>
+    <pokemon class="legendary">
+        <name>zapdos</name>
+        <url>https://pokeapi.co/api/v2/pokemon/145/</url>
+        <base_experience>290</base_experience>
+        <height>16</height>
+        <id>145</id>
+        <sprites>
+            <back_default>https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/145.png</back_default>
+            <front_default>https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png</front_default>
+        </sprites>
+        <weight>526</weight>
+    </pokemon>
+    <pokemon class="legendary">
+        <name>moltres</name>
+        <url>https://pokeapi.co/api/v2/pokemon/146/</url>
+        <base_experience>290</base_experience>
+        <height>20</height>
+        <id>146</id>
+        <sprites>
+            <back_default>https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/146.png</back_default>
+            <front_default>https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/146.png</front_default>
+        </sprites>
+        <weight>600</weight>
+    </pokemon>
+    <pokemon class="legendary">
+        <name>mewtwo</name>
+        <url>https://pokeapi.co/api/v2/pokemon/150/</url>
+        <base_experience>340</base_experience>
+        <height>20</height>
+        <id>150</id>
+        <sprites>
+            <back_default>https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/150.png</back_default>
+            <front_default>https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png</front_default>
+        </sprites>
+        <weight>1220</weight>
+    </pokemon>
+    <pokemon class="legendary">
+        <name>mew</name>
+        <url>https://pokeapi.co/api/v2/pokemon/151/</url>
+        <base_experience>300</base_experience>
+        <height>4</height>
+        <id>151</id>
+        <sprites>
+            <back_default>https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/151.png</back_default>
+            <front_default>https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png</front_default>
+        </sprites>
+        <weight>40</weight>
+    </pokemon>
+</pokemons>
